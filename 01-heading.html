@@ -5,15 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heading -Workshop</title>
     <style>
+        
         body{
             font-family: Verdana, Geneva, Tahoma, sans-serif;
-            margin: 50px;
-            background-color: rgb(200, 216, 216);
+            margin: 0;
+            background-color: rgb(240, 211, 216);
+            
         }
-        .texttitle {color: crimson;
-        text-align: center;
-    text-shadow: 2px 3px 4px rgb(219, 212, 209);}
-    .textcenter {text-align: center;}
+        .texttitle {color: rgb(255, 255, 255);
+                font-size: 30px;
+                font-weight: bold;
+
+
+
+        }
+    .textcenter {text-align: center;
+    }
 
     .card {
         background-color: rgb(226, 224, 224);
@@ -30,6 +37,7 @@
         border-radius: 5px;
         border-top: 5px solid rgb(0, 13, 255);
         border-bottom: 5px solid rgb(0, 13, 255);
+
     }
     .container{
         max-width: 800px
@@ -49,52 +57,109 @@
     }
     a{
         text-decoration: none;
+        color: white;
     }
-    a:hover {color: red;}
+    a:hover {text-decoration: underline;}
     
+
+    header{
+        background: linear-gradient(90deg,rgb(221, 43, 43),rgb(230, 64, 161));
+        padding: 50px 20px;
+        color: white;
+        text-align: center;
+        box-shadow: 0 4 8px rgb(91, 90, 90);
+    }
+
+    .main-content{
+        padding: 30px 20px
+    }
+    .hero{
+        padding: 50p;
+    }
+
+    .hero-text-h1{
+        font-size: 46px;
+        margin-bottom: 10px;
+        color: rgb(160, 15, 15);
+    }
+    .hero-text-p{
+        font-size: 20px;
+        
+        color: rgb(145, 137, 137);
+    }
+
+    .h1-label{background: rgb(0, 229, 255);
+            border-radius: 5px;}
+    .h2-label{background: rgb(0, 255, 38);
+            border-radius: 5px;}
+    .h3-label{background: rgb(238, 198, 0);
+            border-radius: 5px;}
+    .h4-label{background: rgb(255, 94, 0);
+            border-radius: 5px;}
+    .h5-label{background: rgb(234, 0, 255);
+            border-radius: 5px;}
+    .h6-label{background: rgb(255, 0, 55);
+            border-radius: 5px;}
+
+
+
+
     </style>
 </head>
 <body>
-    <h1 class = "texttitle">Workshop: HTML Heading</h1>
-<p class = "textcenter">ฝึกใช้แท็ก &lt;h1> – &lt;h6> และการปรับขนาดหัวข้อด้วย CSS</p>
-<div class = "container">
-    <div class = "card">
-    <h2>1. ความหมายของ Headings (H1–H6)</h2>
-    <p>: HTML มีหัวข้อทั้งหมด 6 ระดับ</p>
-    
-    <ul>
-        <li>H1 – หัวข้อใหญ่สุด ใช้ส าหรับชื่อหน้าเว็บหรือหัวข้อหลัก</li>
-        <li>H2 – หัวข้อรอง แบ่ง Section ของเนื้อหา</li>
-        <li>H3 – หัวข้อย่อยภายใน H2</li>
-        <li>H4 – ย่อยลงไปอีกระดับ</li>
-        <li>H5 – ใช้น้อย แต่เน้นล าดับข้อมูล</li>
-        <li>H6 – เล็กสุด ใช้กับหัวข้อระดับลึก</li>
-    
-    </ul>
-    <p class ="note">💡H1 ควรมีเพียง 1 อันในแต่ละหน้า เพื่อช่วย SEO และโครงสร้างเอกสาร</p>
+    <header>
+        <p class="texttitle">เรียนรู้เว็บเบื้องต้น</p>
+        <nav>
+            <a href="index.html">Home</a>
+        </nav>
+    </header>
+    <div class ="main-content">
+
+        
+        <div class = "container">
+            <section class="hero">
+                <h1 class = "hero-text-h1">แบบฝึกปฏิบัติ: HTML Heading</h1>
+                <p class = "hero-text-p">ฝึกใช้แท็ก &lt;h1> – &lt;h6> และการปรับขนาดหัวข้อด้วย CSS</p>
+            </section>
+
+            <div class = "card">
+                <h2>1. ความหมายของ Headings (H1–H6)</h2>
+                <p> HTML มีหัวข้อทั้งหมด 6 ระดับ</p>
+        
+        <ul>
+            <li><span class="h1-label">H1</span> – หัวข้อใหญ่สุด ใช้ส าหรับชื่อหน้าเว็บหรือหัวข้อหลัก</li>
+            <li><span class="h2-label">H2</span> – หัวข้อรอง แบ่ง Section ของเนื้อหา</li>
+            <li><span class="h3-label">H3</span> – หัวข้อย่อยภายใน H2</li>
+            <li><span class="h4-label">H4</span> – ย่อยลงไปอีกระดับ</li>
+            <li><span class="h5-label">H5</span> – ใช้น้อย แต่เน้นล าดับข้อมูล</li>
+            <li><span class="h6-label">H6</span> – เล็กสุด ใช้กับหัวข้อระดับลึก</li>
+        
+        </ul>
+        <p class ="note">💡H1 ควรมีเพียง 1 อันในแต่ละหน้า เพื่อช่วย SEO และโครงสร้างเอกสาร</p>
+        </div>
+        
+        <div class = "card">
+        <h2>2. ตัวอย่างการใช ้H1–H6</h2>
+        <pre> <code>
+         &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+         &lt;h2&gt;HTML Basics&lt;/h2&gt;
+         &lt;h3&gt;What is HTML?&lt;/h3&gt;
+         &lt;h4&gt;HTML Syntax&lt;/h4&gt;
+         &lt;h5&gt;Example Code&lt;/h5&gt;
+         &lt;h6&gt;Note: Case Sensitive&lt;/h6&gt;
+        </code>
+        </pre>
+        <p class = "note">เมื่อแสดงผลจะได้แบบนี้
+        </p>
+         <h1>Welcome to My Website</h1>
+         <h2>HTML Basics</h2>
+        <h3>What is HTML?</h3>
+        <h4>HTML Synta</h4>
+        <h5>Example Code</h5>
+        <h6>Note: Case Sensitive</h6>
+        </div>
+        </div>
     </div>
-    
-    <div class = "card">
-    <h2>2. ตัวอย่างการใช ้H1–H6</h2>
-    <pre> <code>
-     &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
-     &lt;h2&gt;HTML Basics&lt;/h2&gt;
-     &lt;h3&gt;What is HTML?&lt;/h3&gt;
-     &lt;h4&gt;HTML Syntax&lt;/h4&gt;
-     &lt;h5&gt;Example Code&lt;/h5&gt;
-     &lt;h6&gt;Note: Case Sensitive&lt;/h6&gt;
-    </code>
-    </pre>
-    <p class = "note">เมื่อแสดงผลจะได้แบบนี้
-    </p>
-     <h1>Welcome to My Website</h1>
-     <h2>HTML Basics</h2>
-    <h3>What is HTML?</h3>
-    <h4>HTML Synta</h4>
-    <h5>Example Code</h5>
-    <h6>Note: Case Sensitive</h6>
-    </div>
-</div>
 <p class = "textcenter"><a href="index.html">🏚️Back to Home</a></p>
 </body>
 </html>
