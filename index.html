@@ -4,15 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="เว็บไซต์สอนใช้งาน html css แลพ workshop">
+    <meta name="description" content="เว็บไซต์สอนใช้งาน html css และ workshop">
     <title>Web Workshop : 684259052</title>
     
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
         body {
             font-family: Verdana, Geneva, Tahoma, sans-serif;
-            margin: 20px;
+            margin: 50px;
             padding: 0;
-
+            background-color: rgb(188, 237, 244);
+            
+            line-height: 1.5;
         }
         h1{
             color :darkblue ;
@@ -25,17 +30,25 @@
         }
         
         pre {
-            background-color: rgb(171, 255, 248);
-            border-left: 3px solid rgb(55, 0, 255);
+            background-color: rgb(251, 251, 251);
+            border-left: 4px solid rgb(243, 121, 0);
             padding: 10px 10px 10px 10px;
             font-size: 16px;
-            
+            border-radius: 5px;
+            white-space: pre-wrap;
+        }
+        a{text-decoration: none;}
+        a:hover{text-decoration:  underline;
+        color:  red;}
+
+        .text-center{
+            text-align: center;
         }
     </style>
 </head>
 
-<body>{}
-    <h1>HTML tutorial</h1>
+<body>
+    <h1 ="top">HTML tutorial</h1>
     <p>Welcome to the HTML tutorial. Click on the topics below to start learning:</p>
     <h2 \\style="color: mediumvioletred;"\\>Topics</h2>
 <Ul>
@@ -49,7 +62,7 @@
     <li><a href="#Images">Adding Images</a></li>
     <li><a href="#Tables">Creating Tables</a></li>
     <li><a href="#Forms">HTML Forms</a></li>
-    <li><a href="">Embedding Multimedia </a>(Audio & Video)</li>
+    
     <li><a href="#Semantic">Semantic HTML</a></li>
     <li><a href="#Workshop">My Workshop</a></li>
 </Ul>
@@ -70,7 +83,7 @@
  - HTML can embed programs written in a scripting language such as JavaScript, which affects the behavior andcontent of web pages
  - HTML is not a programming language, but a markup language</pre>
 
- <a href="">back to Top</a>
+ <a href="#top">back to Top</a>
 
 <!-- HTML Document Structure
  -->
@@ -81,50 +94,55 @@
 &lt;html&gt;: เป็นรากของเอกสาร HTML ทั้งหมด
 &lt;head&gt;: ส่วนที่ใช้เก็บข้อมูลเมตา เช่น &lt;title&gt; ชื่อหน้าเว็บ
 &lt;body&gt;: ส่วนที่จะแสดงผลบนหน้าเว็บ
-องค์ประกอบส าคัญของ HTML
+องค์ประกอบสำคัญของ HTML
 แท็ก (Tags):
 - แท็กเริ่มต้น (Opening Tag): เช่น &lt;h1&gt;
 - แท็กปิด (Closing Tag): เช่น &lt;/h1&gt;
 แอตทริบิวต์ (Attributes): คุณสมบัติของแท็ก
-- ใช้เพื่อก าหนดคุณสมบัติเพิ่มเติม เช่น href, src, width, height
+- ใช้เพื่อกำหนดคุณสมบัติเพิ่มเติม เช่น href, src, width, height
 ตัวอย่าง: &lt;h1&gt;Hello, World!&lt;/h1&gt;
 &lt;img src="image.jpg" alt="A description of the image"&gt;
 
 </pre>
 
- <a href="">back to Top</a>
+ <a href="#top">back to Top</a>
 
 <!-- Heading -->
 <h2 id="heading">Heading</h2>
-    <pre> workshop
-HTML headings are defined with the <h1> to <h6> tags...
-- &lt;h1&gt;: Heading 1
-- &lt;h2&gt;: Heading 2
-- &lt;h3&gt;: Heading 3
- - &lt;h4&gt;: Heading 4
- - &lt;h5&gt;: Heading 5
- - &lt;h6&gt;: Headi
-
+<pre> 
+    HTML headings are defined with the &lt;h1 to h6&gt; tags...
+    - &lt;h1&gt;: Heading 1
+    - &lt;h2&gt;: Heading 2
+    - &lt;h3&gt;: Heading 3
+    - &lt;h4&gt;: Heading 4
+    - &lt;h5&gt;: Heading 5
+    - &lt;h6&gt;: Heading 6
+    
 </pre>
+<p><a href="Work-heading.html">workshop</a></p>
 
- <a href="">back to Top</a>
+
+ <a href="#top">back to Top</a>
 
 <!-- Paragraph -->
 <h2 id="Paragraph">Paragraph</h2>
-    <pre> 
-workshop
-HTML paragraphs are defined with the <p> tag...
- - &lt;p
-</pre>
 
- <a href="">back to Top</a>
+    <pre> 
+
+HTML paragraphs are defined with the <p> tag...
+- &lt;p
+</pre>
+<p><a href="Work-Paragraph.html">workshop</a></p>
+
+ <a href="#top">back to Top</a>
+
 
 <!-- Text Formatting
  -->
 <h2 id="Formatting">Text Formatting
 </h2>
     <pre> Text Formatting
-workshop
+
 HTML provides various elements to format text...
 - &lt;h1&gt; to &lt;h6&gt;: Headings
 - &lt;p&gt;: Paragraph
@@ -148,14 +166,14 @@ HTML provides various elements to format text...
 - &lt;code&gt;: Code snippet
 
 </pre>
-
- <a href="">back to Top</a>
+<p><a href="Work-Formatting.html">workshop</a></p>
+ <a href="#top">back to Top</a>
 
 <!-- Creating Links
  -->
 <h2 id="Links">Creating Links
 </h2>
-    <pre> workshop
+    <pre> 
 HTML links are defined with the <a> tag...
 - &lt;a href="url" target=""&gt;Link text&lt;/a&gt;
 - The href attribute specifies the URL of the page the link goes to
@@ -178,14 +196,15 @@ HTML links are defined with the <a> tag...
 - Example: &lt;a href="file.txt" download&gt;Download Text File&lt;/a&gt;
 
 </pre>
+<p><a href="Work-Links.html">workshop</a></p>
 
- <a href="">back to Top</a>
+ <a href="#top">back to Top</a>
 
 <!-- Lists (Ordered and Unordered)
  -->
 <h2 id="Lists">Lists (Ordered and Unordered)
 </h2>
-    <pre> workshop
+    <pre> 
 HTML lists are defined with the &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; tags...
 - &lt;ul&gt;: Unordered list
 - &lt;ol&gt;: Ordered list
@@ -228,14 +247,14 @@ HTML lists are defined with the &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; tags...
 - Example: &lt;ol style="list-style-type: lower-roman;"&gt;
 
 </pre>
-
- <a href="">back to Top</a>
+<p><a href="Work-Lists.html">workshop</a></p>
+ <a href="#top">back to Top</a>
 
 <!-- Adding Images
  -->
 <h2 id="Images">Adding Images
 </h2>
-    <pre> workshop
+    <pre> 
 HTML images are defined with the &lt;img&gt; tag...
 - &lt;img src="url" alt="description"&gt;
 - The src attribute specifies the URL of the image
@@ -277,8 +296,9 @@ object-fit: cover;
 }
 
 </pre>
+<p><a href="Work-Images.html">workshop</a></p>
 
- <a href="">back to Top</a>
+ <a href="#top">back to Top</a>
 
 <!-- Creating Tables
  -->
@@ -294,7 +314,7 @@ HTML tables are defined with the &lt;table&gt;, &lt;tr&gt;, &lt;th&gt;, and &lt;
 
 </pre>
 
- <a href="">back to Top</a>
+ <a href="#top">back to Top</a>
 
 <!-- HTML Forms
  -->
@@ -334,17 +354,11 @@ radio, checkbox, date, file
 
 </pre>
 
- <a href="">back to Top</a>
-
-<!-- Embedding Multimedia (Audio & Video)
- -->
-<h2 id="intro">Embedding Multimedia (Audio & Video)
-</h2>
-    <pre> 
+ <a href="#top">back to Top</a>
 
 </pre>
 
- <a href="">back to Top</a>
+ <a href="#top">back to Top</a>
 
 <!-- Semantic HTML-->
 <h2 id="Semantic">Semantic HTML
@@ -360,10 +374,10 @@ radio, checkbox, date, file
 
 </pre>
 
- <a href="">back to Top</a>
+ <a href="#top">back to Top</a>
 
 <!-- Workshop-->
-<h2 id="Workshop"><MY Workshop
+<h2 id="Workshop">MY Workshop
 </h2>
     <pre> 
 -workshop01 :rabiit
@@ -371,8 +385,12 @@ radio, checkbox, date, file
 
 </pre>
 
- <a href="">back to Top</a>
-
+ <a href="#top">back to Top</a>
+<hr>
+<div class="text-center"> 
+<a href="https://www.w3schools.com/html/">Learn more about HTML</a>
+<p>&copy; 2024 HTML Tutorial by Sahapat Butsayakul</p>
+</div>
 </body>
 
 
