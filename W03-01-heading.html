@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heading</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 30px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+
+        .text-title {
+            color: #d013c1;
+            /* text-align: center; */
+        }
+        .text-center {
+            text-align: center;
+        }
+
+        .card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgb(0, 0, 0);
+            margin-bottom: 20px;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            border-left: 4px solid #cc1bbd;
+            padding-top: 10px;
+            font-size: 16px;
+        }
+
+        .note {
+            color: #0707ff;
+            background-color: #fff532;
+        }
+        .note::before {
+            content: "💚";
+ 
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-title text-center">Workshop: HTML Heading</h1>
+        <p class="text-center">ฝึกใช้แท็ก &lt;h1> – &lt;h6> และการปรับขนาดหัวข้อด้วย CSS</p>
+        <div class="card">
+            <h2>1. ความหมายของ Headings (H1–H6)</h2>
+            <p>HTML มีหัวข้อทั้งหมด 6 ระดับ</p>
+            <ul>
+                <li>H1 – หัวข้อใหญ่สุด ใช้สำหรับชื่อหน้าเว็บหรือหัวข้อหลัก</li>
+                <li>H2 – หัวข้อรอง แบ่ง Section ของเนื้อหา</li>
+                <li>H3 – หัวข้อย่อยภายใน H2</li>
+                <li>H4 – ย่อยลงไปอีกระดับ</li>
+                <li>H5 – ใช้น้อย แต่เน้นลำดับข้อมูล</li>
+                <li>H6 – เล็กสุด ใช้กับหัวข้อระดับลึก</li>
+            </ul>
+            <p class="note" style="border-left: 4px solid rgb(219, 22, 196)">💡H1 ควรมีเพียง 1 อันในแต่ละหน้า เพื่อช่วย SEO และโครงสร้างเอกสาร</p>
+        </div>
+        <div class="card">
+            <h2>2. ตัวอย่างการใช้ H1–H6</h2>
+            <pre>
+                <code>
+            &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+            &lt;h2&gt;HTML Basics&lt;/h2&gt;
+            &lt;h3&gt;What is HTML?&lt;/h3&gt;
+            &lt;h4&gt;HTML Syntax&lt;/h4&gt;
+            &lt;h5&gt;Example Code&lt;/h5&gt;
+            &lt;h6&gt;Note: Case Sensitive&lt;/h6&gt;
+                </code>
+            </pre>
+            <h1>H1: Welcome to My Website</h1>
+            <h2>H2: HTML Basics</h2>
+            <h3>H3: What is HTML?</h3>
+            <h4>H4: HTML Syntax</h4>
+            <h5>H5: Example Code</h5>
+            <h6 class="note">H6: Note about heading size</h6>
+        </div>
+        <a href="index.html"><p style="text-align: right;">Back to Home</p></a>
+    </div>
+
+
+
+</body>
+
+</html>
