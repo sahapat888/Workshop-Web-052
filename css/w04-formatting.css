@@ -5,7 +5,7 @@
 }
 body {
   font-family: Arial, sans-serif;
-  background-color: #ebf8ff;
+  background-color: #b2e0fa;
 
   line-height: 1.6;
 }
@@ -23,7 +23,7 @@ header {
   background: linear-gradient(to right, #014ff8, #15bafc);
   padding: 20px;
   color: white;
-  box-shadow: 0 4px 8px solid ;
+  box-shadow: 0 4px 8px solid firebrick;
 
   display: flex;
   justify-content: space-between;
@@ -31,10 +31,11 @@ header {
   
 }
 
+
 .brand{
   display: flex;
   align-items: center;
-  gap: 50px;
+  gap: 10px;
 }
 .brand-icon{
   font-size: 50px;
@@ -42,7 +43,16 @@ header {
 }
 .brand-text p {font-size: 14px;}
 
-
+nav a{
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  margin-left: 20px;
+}
+nav a:hover{
+  
+  text-decoration: underline;
+  
+}
 
 
 
@@ -53,12 +63,12 @@ header {
   margin: 0 auto;
   padding: 20px;  
 
-  background-color: rgb(241, 186, 144);
+  background-color: rgb(6, 62, 167);
 }
 
 .card-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  background-color: rgb(233, 26, 26);
+  background-color: rgb(0, 208, 255);
 }
 
