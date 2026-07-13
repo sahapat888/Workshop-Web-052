@@ -1,74 +1,266 @@
+/* base setting */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
 body {
   font-family: Arial, sans-serif;
-  background-color: #b2e0fa;
-
+  background-color: #d1e5f8;
   line-height: 1.6;
 }
-header,
+
 footer,
-.hero,
-.card,
+/* .hero, */
+/* .card, */
 .tip-box {
-  border: 1px solid red ;
+  border: 1px solid red;
   background-color: #ebf8ff;
   margin: 20px;
   padding: 20px;
 }
+
+/* header */
 header {
   background: linear-gradient(to right, #014ff8, #15bafc);
   padding: 20px;
   color: white;
-  box-shadow: 0 4px 8px solid firebrick;
-
+  box-shadow: 0 2px 4px rgb(255, 0, 0);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
 }
 
-
-.brand{
+.brand {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.brand-icon{
+
+.brand-icon {
   font-size: 50px;
-
 }
-.brand-text p {font-size: 14px;}
 
-nav a{
+.brand-text p {
+  font-size: 14px;
+}
+
+/* nav */
+nav a {
   color: rgb(255, 255, 255);
   text-decoration: none;
   margin-left: 20px;
 }
-nav a:hover{
-  
+
+nav a:hover {
   text-decoration: underline;
-  
 }
 
+/* hero section */
+.hero {
+  padding: 45px 70px 25px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
 
+.hero-icon {
+  background: linear-gradient(135deg, #014ff8, #15bafc);
+  color: rgb(255, 255, 255);
+  font-size: 50px;
+  font-weight: bold;
+  padding: 20px;
+  border-radius: 20%;
+}
 
+.hero-text h1 {
+  color: #00106b;
+  font-size: 50px;
+}
 
+.hero-text p {
+  color: #78787e;
+  font-size: 20px;
+}
+
+/* main section */
 .container {
-  max-width: 1200px;
-  width: 90%;
-  margin: 0 auto;
-  padding: 20px;  
-
-  background-color: rgb(6, 62, 167);
+  /* max-width: 1200px; */
+  width: 100%;
+  /* margin: 0 auto; */
+  /* padding: 20px; */
+  /* background-color: rgb(0, 136, 255); */
+  padding: 0px 60px;
 }
 
+/* Card Grid */
 .card-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  background-color: rgb(0, 208, 255);
+  grid-template-columns: repeat(3, 1fr);
+  /* background-color: rgb(0, 208, 255); */
+  gap: 20px;
 }
 
+.card {
+  background-color: white;
+  border: 1px solid #c4fa00;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgb(0, 67, 252);
+}
+
+.card-header {
+  background-color: #9db0b5;
+  color: #3b73e1;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-header-icon {
+  background-color: #00a6ff;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 50%;
+
+  font-size: 20px;
+
+  width: 38px;
+  height: 38px;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.purple-bg {
+  background-color: rgb(154, 0, 154);
+}
+.purple-text {
+  color: rgb(154, 0, 154);
+}
+.card-body {
+  padding: 20px;
+}
+
+.format-row {
+  padding: 8px 0;
+  border-bottom: 1px solid rgb(95, 88, 88);
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Label Styles */
+.label {
+  background-color: #c82d0b;
+  color: #ffffff;
+  padding: 4px 8px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 13px;
+}
+.b-label {
+  background-color: #ff8c00;
+}
+.strong-label {
+  background-color: #484d03;
+}
+.i-label {
+  background-color: #00aa37;
+} /* ปรับให้อ่านง่ายขึ้น */
+.em-label {
+  background-color: #0492ff;
+}
+.u-label {
+  background-color: #002aff;
+}
+.mark-label {
+  background-color: #2f00fe;
+}
+.small-label {
+  background-color: #d900ff;
+}
+.del-label {
+  background-color: #ff00d9;
+}
+.sup-label {
+  background-color: #ff0062;
+}
+.sub-label {
+  background-color: #ff0000;
+}
+
+/* card2 */
+
+.code-box {
+  background-color: #141a29;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+pre {
+  font-size: 15px;
+  left: 1.6px;
+  line-height: 1.8;
+  color: #ffffff;
+}
+
+/* สีตัวเลขหน้าบรรทัด */
+.line-no {
+  color: #ebf8ff;
+  display: inline-block;
+  width: 30px;
+}
+
+/* ไฮไลท์ที่ตัวแท็ก */
+.html-tag {
+  color: #c82d0b;
+}
+
+/* card3 */
+
+.activity-list {
+  list-style: none;
+}
+.activity-list li {
+  margin-bottom: 20px;
+}
+
+.check {
+  /* background-color: #00aa37; */
+
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+
+  border-radius: 50%;
+
+  display: inline-flex;
+
+  height: 38px;
+  width: 38px;
+  justify-content: center;
+  align-items: center;
+}
+.check-blue {
+  background-color: #0033ff;
+}
+.check-red {
+  background-color: #ff0202;
+}
+.check-orange {
+  background-color: #ff8306;
+}
+.check-pink {
+  background-color: #ff00aa;
+}
+.check-green {
+  background-color: #15ff00;
+}
