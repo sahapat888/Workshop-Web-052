@@ -11,10 +11,8 @@ body {
   line-height: 1.6;
 }
 
-footer,
-/* .hero, */
-/* .card, */
-.tip-box {
+/* ลบ .tip-box ออกจากกรอบสีแดงเดิมแล้ว */
+footer {
   border: 1px solid red;
   background-color: #ebf8ff;
   margin: 20px;
@@ -86,11 +84,7 @@ nav a:hover {
 
 /* main section */
 .container {
-  /* max-width: 1200px; */
   width: 100%;
-  /* margin: 0 auto; */
-  /* padding: 20px; */
-  /* background-color: rgb(0, 136, 255); */
   padding: 0px 60px;
 }
 
@@ -98,7 +92,6 @@ nav a:hover {
 .card-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* background-color: rgb(0, 208, 255); */
   gap: 20px;
 }
 
@@ -116,7 +109,6 @@ nav a:hover {
   font-weight: bold;
   font-size: 20px;
   padding: 10px;
-
   display: flex;
   align-items: center;
   gap: 10px;
@@ -127,12 +119,9 @@ nav a:hover {
   color: #ffffff;
   padding: 10px;
   border-radius: 50%;
-
   font-size: 20px;
-
   width: 38px;
   height: 38px;
-
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -166,39 +155,18 @@ nav a:hover {
   font-weight: bold;
   font-size: 13px;
 }
-.b-label {
-  background-color: #ff8c00;
-}
-.strong-label {
-  background-color: #484d03;
-}
-.i-label {
-  background-color: #00aa37;
-} /* ปรับให้อ่านง่ายขึ้น */
-.em-label {
-  background-color: #0492ff;
-}
-.u-label {
-  background-color: #002aff;
-}
-.mark-label {
-  background-color: #2f00fe;
-}
-.small-label {
-  background-color: #d900ff;
-}
-.del-label {
-  background-color: #ff00d9;
-}
-.sup-label {
-  background-color: #ff0062;
-}
-.sub-label {
-  background-color: #ff0000;
-}
+.b-label { background-color: #ff8c00; }
+.strong-label { background-color: #484d03; }
+.i-label { background-color: #00aa37; }
+.em-label { background-color: #0492ff; }
+.u-label { background-color: #002aff; }
+.mark-label { background-color: #2f00fe; }
+.small-label { background-color: #d900ff; }
+.del-label { background-color: #ff00d9; }
+.sup-label { background-color: #ff0062; }
+.sub-label { background-color: #ff0000; }
 
 /* card2 */
-
 .code-box {
   background-color: #141a29;
   padding: 15px;
@@ -212,20 +180,17 @@ pre {
   color: #ffffff;
 }
 
-/* สีตัวเลขหน้าบรรทัด */
 .line-no {
   color: #ebf8ff;
   display: inline-block;
   width: 30px;
 }
 
-/* ไฮไลท์ที่ตัวแท็ก */
 .html-tag {
   color: #c82d0b;
 }
 
 /* card3 */
-
 .activity-list {
   list-style: none;
 }
@@ -234,33 +199,68 @@ pre {
 }
 
 .check {
-  /* background-color: #00aa37; */
-
   color: white;
   font-weight: bold;
   font-size: 24px;
-
   border-radius: 50%;
-
   display: inline-flex;
-
   height: 38px;
   width: 38px;
   justify-content: center;
   align-items: center;
 }
-.check-blue {
-  background-color: #0033ff;
+.check-blue { background-color: #0033ff; }
+.check-red { background-color: #ff0202; }
+.check-orange { background-color: #ff8306; }
+.check-pink { background-color: #ff00aa; }
+.check-green { background-color: #15ff00; }
+
+/* กล่องเกรดความรู้ */
+.tip-box {
+  background-color: #fffdec;     
+  border: 1px solid #ffcc00;    
+  border-radius: 12px;           
+  margin: 20px;
+  padding: 20px;
+  
+  display: flex;                 
+  align-items: flex-start;       
+  gap: 20px;                    
 }
-.check-red {
-  background-color: #ff0202;
+
+/* icon */
+.tip-box-icon {
+  background-color: #ffbb00;    
+  font-size: 26px;               
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;            
+  display: inline-flex;
+  justify-content: center;      
+  align-items: center;           
+  flex-shrink: 0;               
 }
-.check-orange {
-  background-color: #ff8306;
+
+
+
+/* หัวข้อเกร็ดความรู้ */
+.tip-box h3 {
+  color: #8c5200;                
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 6px;
+  margin-top: 2px;
 }
-.check-pink {
-  background-color: #ff00aa;
+
+/* ข้อความอธิบายด้านใน */
+.tip-box p {
+  color: #333333;                
+  line-height: 1.6;
 }
-.check-green {
-  background-color: #15ff00;
+
+/* ตกแต่งแท็ก <code>  */
+.tip-box code {
+  color: #ff0000;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
 }
