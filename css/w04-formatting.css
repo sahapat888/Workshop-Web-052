@@ -311,11 +311,6 @@ footer {
 }
 
 
-.footer-col ul li a:hover {
-  text-decoration: underline;
-  color: #ffffff; /* เมื่อนำเมาส์ไปชี้ให้สว่างขึ้น */
-}
-
 /* copyright */
 .footer-bottom {
   text-align: center;
