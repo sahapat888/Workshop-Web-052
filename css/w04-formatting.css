@@ -97,14 +97,14 @@ nav a:hover {
 
 .card {
   background-color: white;
-  border: 1px solid #c4fa00;
+  border: 1px solid #2500fa;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgb(0, 67, 252);
 }
 
 .card-header {
-  background-color: #9db0b5;
+  background-color: #70d9f6;
   color: #3b73e1;
   font-weight: bold;
   font-size: 20px;
@@ -257,10 +257,71 @@ pre {
   color: #333333;                
   line-height: 1.6;
 }
-
+  
 /* ตกแต่งแท็ก <code>  */
 .tip-box code {
   color: #ff0000;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
+}
+/* -----footer------ */
+footer {
+  background-color: #0e2a6b; 
+  color: #ffffff; 
+  padding: 50px 0 20px 0;
+  margin: 0; 
+  border: none; /* เอาขอบสีแดงเดิมออก */
+  font-family: Arial, sans-serif;
+}
+
+/*  Layout  Grid  4 colum */
+.footer-container {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr 1fr 1fr; 
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/*หัวข้อ Footer */
+.footer-col h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* ข้อความอธิบายในคอลัมน์แรก */
+.footer-col p {
+  font-size: 14px;
+  color: #e0eaf5; 
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* ลบจุดหน้า List ออก */
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 15px;
+}
+
+
+.footer-col ul li a:hover {
+  text-decoration: underline;
+  color: #ffffff; /* เมื่อนำเมาส์ไปชี้ให้สว่างขึ้น */
+}
+
+/* copyright */
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  margin-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15); /* เส้นกั้นบางๆ */
+  font-size: 13px;
+  color: #e0eaf5;
 }
