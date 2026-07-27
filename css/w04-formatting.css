@@ -155,16 +155,36 @@ nav a:hover {
   font-weight: bold;
   font-size: 13px;
 }
-.b-label { background-color: #ff8c00; }
-.strong-label { background-color: #484d03; }
-.i-label { background-color: #00aa37; }
-.em-label { background-color: #0492ff; }
-.u-label { background-color: #002aff; }
-.mark-label { background-color: #2f00fe; }
-.small-label { background-color: #d900ff; }
-.del-label { background-color: #ff00d9; }
-.sup-label { background-color: #ff0062; }
-.sub-label { background-color: #ff0000; }
+.b-label {
+  background-color: #ff8c00;
+}
+.strong-label {
+  background-color: #484d03;
+}
+.i-label {
+  background-color: #00aa37;
+}
+.em-label {
+  background-color: #0492ff;
+}
+.u-label {
+  background-color: #002aff;
+}
+.mark-label {
+  background-color: #2f00fe;
+}
+.small-label {
+  background-color: #d900ff;
+}
+.del-label {
+  background-color: #ff00d9;
+}
+.sup-label {
+  background-color: #ff0062;
+}
+.sub-label {
+  background-color: #ff0000;
+}
 
 /* card2 */
 .code-box {
@@ -209,43 +229,51 @@ pre {
   justify-content: center;
   align-items: center;
 }
-.check-blue { background-color: #0033ff; }
-.check-red { background-color: #ff0202; }
-.check-orange { background-color: #ff8306; }
-.check-pink { background-color: #ff00aa; }
-.check-green { background-color: #15ff00; }
+.check-blue {
+  background-color: #0033ff;
+}
+.check-red {
+  background-color: #ff0202;
+}
+.check-orange {
+  background-color: #ff8306;
+}
+.check-pink {
+  background-color: #ff00aa;
+}
+.check-green {
+  background-color: #15ff00;
+}
 
 /* กล่องเกรดความรู้ */
 .tip-box {
-  background-color: #fffdec;     
-  border: 1px solid #ffcc00;    
-  border-radius: 12px;           
+  background-color: #fffdec;
+  border: 1px solid #ffcc00;
+  border-radius: 12px;
   margin: 20px;
   padding: 20px;
-  
-  display: flex;                 
-  align-items: flex-start;       
-  gap: 20px;                    
+
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
 }
 
 /* icon */
 .tip-box-icon {
-  background-color: #ffbb00;    
-  font-size: 26px;               
+  background-color: #ffbb00;
+  font-size: 26px;
   width: 50px;
   height: 50px;
-  border-radius: 50%;            
+  border-radius: 50%;
   display: inline-flex;
-  justify-content: center;      
-  align-items: center;           
-  flex-shrink: 0;               
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
 }
-
-
 
 /* หัวข้อเกร็ดความรู้ */
 .tip-box h3 {
-  color: #8c5200;                
+  color: #8c5200;
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 6px;
@@ -254,10 +282,10 @@ pre {
 
 /* ข้อความอธิบายด้านใน */
 .tip-box p {
-  color: #333333;                
+  color: #333333;
   line-height: 1.6;
 }
-  
+
 /* ตกแต่งแท็ก <code>  */
 .tip-box code {
   color: #ff0000;
@@ -266,10 +294,10 @@ pre {
 }
 /* -----footer------ */
 footer {
-  background-color: #0e2a6b; 
-  color: #ffffff; 
+  background-color: #0e2a6b;
+  color: #ffffff;
   padding: 50px 0 20px 0;
-  margin: 0; 
+  margin: 0;
   border: none; /* เอาขอบสีแดงเดิมออก */
   font-family: Arial, sans-serif;
 }
@@ -277,7 +305,7 @@ footer {
 /*  Layout  Grid  4 colum */
 .footer-container {
   display: grid;
-  grid-template-columns: 2.5fr 1fr 1fr 1fr; 
+  grid-template-columns: 2.5fr 1fr 1fr 1fr;
   gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
@@ -294,7 +322,7 @@ footer {
 /* ข้อความอธิบายในคอลัมน์แรก */
 .footer-col p {
   font-size: 14px;
-  color: #e0eaf5; 
+  color: #e0eaf5;
   margin-bottom: 15px;
   line-height: 1.6;
 }
@@ -309,7 +337,6 @@ footer {
 .footer-col ul li {
   margin-bottom: 15px;
 }
-
 
 /* copyright */
 .footer-bottom {
