@@ -1,28 +1,32 @@
 * {
-  /* box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
-  padding: 0; */
+  padding: 0;
 }
+
 body {
-  font-family: "IBM Plex Sans Thai", Arial, Helvetica, sans-serif;
-  background-color: rgb(255, 205, 205);
-  color: darkblue;
+  font-family: "Kanit", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(247, 210, 162);
+  color: rgb(29, 25, 25);
 
   line-height: 1.6;
 }
 
 .container {
   /* border: 1px solid red;
-  padding: 15px;
-  margin: 15px; */
+    padding: 15px;
+    margin: 15px; */
 }
-/* =================== header ================ */
-.site-header {
-  /* border: 1px solid rgb(0, 255, 179);
-  padding: 15px;
-  margin: 15px; */
 
-  background: linear-gradient(90deg, rgb(255, 120, 120), rgb(140, 140, 247));
+/* ====================
+         Header 
+=======================*/
+.site-header {
+  /* border: 1px solid rgb(25, 0, 255);
+    padding: 15px;
+    margin: 15px; */
+
+  background: linear-gradient(90deg, rgb(251, 151, 1), rgb(179, 0, 0));
 
   display: flex;
   justify-content: space-between;
@@ -30,16 +34,17 @@ body {
 
   padding: 20px;
 }
+
 .brand {
-  /* border: 1px solid rgb(132, 0, 255);*/
-  padding: 15px;
-  margin: 15px;
+  /* border: 1px solid rgb(255, 0, 208);
+    padding: 15px;
+    margin: 15px; */
 
   display: flex;
   align-items: center;
   gap: 15px;
 
-  color: aliceblue;
+  color: white;
 }
 
 .brand-icon {
@@ -49,119 +54,252 @@ body {
   height: 60px;
 
   display: flex;
-  align-items: center;
   justify-content: center;
-
-  font-size: 35px;
+  align-items: center;
 
   border-radius: 50%;
-  border: 5px solid rgb(150, 0, 25);
+  border: 5px solid rgb(238, 2, 108);
+
+  font-size: 35px;
 }
+
 .brand-text h2 {
-  font-size: 26 px;
+  font-size: 26px;
 }
 .brand-text p {
-  font-size: 14 px;
+  font-size: 14px;
   opacity: 0.85;
 }
+
 .main-nav {
-  /* border: 1px solid rgb(255, 61, 223);
-  padding: 15px;
-  margin: 15px;*/
+  /* border: 1px solid rgb(255, 0, 208);
+    padding: 15px;
+    margin: 15px; */
 }
+
 .nav-list {
-  list-style: none;
+  list-style-type: none;
 
   display: flex;
-  gap: 15px;
   align-items: center;
-}
-.nav-list a {
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-}
-.nav-list a:hover {
-  background: rgba(160, 166, 255, 0.548);
-  padding: 12px 16px;
-  border-radius: 8px;
-  transition: all 0.5s;
+  gap: 15px;
 }
 
-/* ============= main ======== */
+.nav-list a {
+  color: white;
+  text-decoration: none;
+
+  padding: 12px 16px;
+  border-radius: 8px;
+  transition: all 1s;
+}
+
+.nav-list a:hover {
+  background-color: rgba(240, 248, 255, 0.606);
+}
+
+/* ====================
+         Main-Layout 
+=======================*/
 .main-layout {
-  /* border: 1px solid rgb(0, 38, 255);
-  padding: 15px;
-  margin: 15px; */
-  padding: 20px;
+  /* border: 1px solid rgb(25, 0, 255);;
+    padding: 15px;
+    margin: 15px; */
+
+  padding: 20px 22px 0px;
 
   display: grid;
   grid-template-columns: 1fr 390px;
+  /* grid-template-columns: 70% 30%; */
 }
 
-/* let content */
+/* ======== Left-content ======== */
+
 .left-content {
-  /* border: 1px solid rgb(21, 255, 0);
-  padding: 15px;
-  margin: 15px; */
+  /* border: 1px solid rgb(227, 3, 190);;
+    padding: 15px;
+    margin: 15px; */
 
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+
 /* hero */
 .hero {
-  /* border: 1px solid rgb(21, 255, 0);
-  padding: 15px;
-  margin: 15px; */
+  /* border: 1px solid rgb(25, 3, 227);;
+    padding: 15px;
+    margin: 15px; */
 
   display: grid;
   grid-template-columns: 1.5fr 0.8fr;
   align-items: center;
   justify-content: center;
 
-  background: linear-gradient(100deg, rgb(255, 251, 251), rgb(174, 174, 255));
+  background: linear-gradient(100deg, rgb(246, 244, 244), rgb(249, 199, 165));
 
   border-radius: 12px;
   padding: 24px 36px;
-  
-    0,
-    4px 12px rgba(0, 0, 0, 0.678);
+  box-shadow: 0 4px 12px rgba(93, 93, 93, 0.462);
+
   min-height: 185px;
 }
 
 .hero-text h1 {
   font-size: 36px;
-  color: rgb(255, 0, 0);
+  color: rgb(10, 63, 133);
 }
+
 .hero-text p {
   font-size: 21px;
-  color: rgba(255, 0, 0, 0.719);
-  font-weight: 700px;
+  color: rgb(16, 104, 163);
+  font-weight: 600;
 }
+
 .hero-photo img {
   width: 400px;
   height: 200px;
-  border: 3px solid rgb(252, 68, 68);
+  border: 3px solid rgb(15, 94, 184);
   border-radius: 20px;
 
-  object-fit: fill;
-
+  /* object-fit: contain; */
+  /* object-fit: fill; */
+  object-fit: cover;
+  /* 
+    object-fit: contain ➡️เห็นภาพครบ รักษาสัดส่วน (อาจมีขอบว่าง)
+    object-fit: fill ➡️ยืดภาพให้เต็มกล่อง ภาพอาจบิด (สัดส่วนเพี้ยน)
+    object-fit: cover ➡️ครอปภาพให้เต็มกล่อง รักษาสัดส่วน บางส่วนของภาพจะถูกตัดออก
+    */
 }
 
+/* ===========link examle */
 .card {
- 
+  /* border: 1px solid rgb(143, 143, 143);
+  padding: 15px;
+  margin: 15px; */
+
+  background-color: white;
+
+  border-radius: 12px;
+  padding: 24px 36px;
+  box-shadow: 0 4px 12px rgba(212, 212, 212, 0.462);
 }
 
-/* right content */
-.right-side-bar {
-  border: 1px solid rgb(30, 255, 0);
+.card-header-title {
+  /* background-color: rgb(250, 174, 174); */
+
+  color: rgb(10, 63, 133);
+
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.card-body-grid {
+  /* background-color: bisque; */
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  gap: 15px;
+}
+/* panelด้านซ้าย */
+.result-panel {
+  border: 1px solid rgb(231, 0, 38);
+  border-radius: 10px;
+  /* padding: 10px; */
+  overflow: hidden;
+}
+.result-panel-title {
+  background-color: rgb(255, 205, 171);
+  padding: 6px 15px;
+}
+.result-panel-body {
+  padding: 6px 15px;
+}
+.result-panel-body a {
+  display: block;
+  color: blue;
+}
+
+.result-panel-body a:hover {
+  color: #ef0000;
+  text-decoration: none;
+}
+.mail-icon {
+  background-color: blue;
+  padding: 2px;
+  border-radius: 5px;
+
+  text-decoration: none;
+}
+
+.back-button {
+  border: 2px solid blue;
+  border-radius: 5px;
+  padding: 4px 15px;
+  margin-top: 10px;
+
+  text-decoration: none;
+
+  display: inline-block !important;
+}
+/* panelด้านขวา */
+
+.code-panel {
+  border: 1px solid rgb(231, 0, 38);
+  border-radius: 10px;
+  /* padding: 10px; */
+  overflow: hidden;
+  background-color: black;
+}
+.code-panel-body {
+  background-color: black;
+  min-height: 145px;
+
+  font-family: monospace;
+  font-size: 15px;
+}
+.code-list {
+  color: white;
+  padding: 16px 50px;
+}
+.code-list li {
+  padding: 0px 20px;
+}
+.tag {
+  color: red;
+}
+.attr {
+  color: greenyellow;
+}
+.values {
+  color: green;
+}
+
+/* image examle */
+/* ด้านซ้าย */
+.result-panel-body-3g {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  padding: 20px;
+}
+figcaption {
+  font-size: 10px;
+  text-align: center;
+}
+
+/* ======== Right-content ======== */
+
+.right-sidebar {
+  border: 1px solid rgb(227, 3, 190);
   padding: 15px;
   margin: 15px;
 }
 
-/* ============= tip-box ============ */
+/* ====================
+         Tip-Box 
+=======================*/
 .tip-box {
-  border: 1px solid rgb(255, 0, 234);
+  border: 1px solid rgb(25, 0, 255);
   padding: 15px;
   margin: 15px;
 }
