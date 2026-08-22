@@ -107,7 +107,7 @@ body {
     margin: 15px; */
 
   padding: 20px 22px 0px;
-
+  gap: 20px;  
   display: grid;
   grid-template-columns: 1fr 390px;
   /* grid-template-columns: 70% 30%; */
@@ -287,14 +287,70 @@ figcaption {
   text-align: center;
 }
 
-/* ======== Right-content ======== */
-
+/* ======== Right Sidebar ======== */
 .right-sidebar {
-  border: 1px solid rgb(227, 3, 190);
-  padding: 15px;
-  margin: 15px;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
+.sidebar-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 24px 28px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.target-icon {
+  font-size: 26px;
+}
+
+.sidebar-header h3 {
+  color: rgb(10, 63, 133);
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.objective-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.objective-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-size: 14px;
+  color: #333333;
+  line-height: 1.5;
+}
+
+.badge-num {
+  background-color: #1a56db;
+  color: #ffffff;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 600;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
 /* ====================
          Tip-Box 
 =======================*/
