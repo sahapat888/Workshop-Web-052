@@ -107,7 +107,8 @@ body {
     margin: 15px; */
 
   padding: 20px 22px 0px;
-  gap: 20px;  
+
+  gap: 20px;
   display: grid;
   grid-template-columns: 1fr 390px;
   /* grid-template-columns: 70% 30%; */
@@ -299,6 +300,7 @@ figcaption {
   border-radius: 20px;
   padding: 24px 28px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
 }
 
 .sidebar-header {
@@ -319,7 +321,8 @@ figcaption {
   margin: 0;
 }
 
-.objective-list {
+.objective-list,
+.activity-list {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -328,7 +331,8 @@ figcaption {
   gap: 18px;
 }
 
-.objective-list li {
+.objective-list li,
+.activity-list li {
   display: flex;
   align-items: flex-start;
   gap: 14px;
@@ -351,11 +355,172 @@ figcaption {
   flex-shrink: 0;
   margin-top: 2px;
 }
+/* -----------Tag Menu_ */
+.tag-menu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.tag-menu span {
+  border: 1px solid rgb(10, 10, 10);
+  border-radius: 30px;
+  padding: 8px 6px;
+  text-align: center;
+}
+.tag-menu span:nth-child(1) {
+  background-color: rgb(166, 142, 255);
+  color: rgb(54, 21, 170);
+}
+.tag-menu span:nth-child(2) {
+  background-color: rgb(255, 142, 246);
+  color: rgb(170, 21, 145);
+}
+.tag-menu span:nth-child(3) {
+  background-color: rgb(255, 219, 142);
+  color: rgb(170, 148, 21);
+}
+.tag-menu span:nth-child(4) {
+  background-color: rgb(146, 255, 142);
+  color: rgb(21, 170, 46);
+}
+.tag-menu span:nth-child(5) {
+  background-color: rgb(255, 142, 180);
+  color: rgb(170, 21, 108);
+}
+.tag-menu span:nth-child(6) {
+  background-color: rgb(142, 163, 255);
+  color: rgb(21, 36, 170);
+}
+.tag-menu span:nth-child(7) {
+  background-color: rgb(142, 255, 240);
+  color: rgb(21, 170, 170);
+}
+.tag-menu span:nth-child(8) {
+  background-color: rgb(255, 168, 142);
+  color: rgb(170, 56, 21);
+}
+
+/* activity menu */
+.activity-list li:nth-child(1) span {
+  background-color: red;
+}
+.activity-list li:nth-child(2) span {
+  background-color: rgb(22, 20, 20);
+}
+.activity-list li:nth-child(3) span {
+  background-color: rgb(0, 255, 34);
+}
+.activity-list li:nth-child(4) span {
+  background-color: rgb(255, 123, 0);
+}
+.activity-list li:nth-child(5) span {
+  background-color: rgb(0, 4, 255);
+}
+.activity-list li:nth-child(6) span {
+  background-color: rgb(255, 0, 212);
+}
+
+/* ----------------submit */
+.submit-card {
+  background-color: #2981f5;
+  border: 1px solid rgb(0, 26, 255);
+  display: flex;
+  align-items: center;
+
+  gap: 30px;
+}
+.icon-plane {
+  font-size: 30px;
+}
+
 /* ====================
          Tip-Box 
 =======================*/
 .tip-box {
+  padding: 15px 28px;
+  margin: 15px 22px 20px;
+  background: #e2ebff;
+  border-radius: 14px;
   border: 1px solid rgb(25, 0, 255);
-  padding: 15px;
-  margin: 15px;
+
+  display: grid;
+  grid-template-columns: 90px 1fr 170px;
+  align-items: center;
+  gap: 22px;
+}
+.icon-i {
+  color: #e2ebff;
+  background: #2981f5;
+
+  border-radius: 50%;
+  width: 72;
+  height: 72;
+
+  font-size: 46px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tip-content h2 {
+  color: #1a56db;
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+.tip-content p {
+  font-size: 15px;
+  color: rgb(12, 17, 17);
+}
+.tip-content span {
+  color: #ef0000;
+  font-family: monospace;
+  font-weight: bold;
+}
+.tip-photo {
+  text-align: center;
+}
+.bulb {
+  font-size: 52px;
+}
+.book {
+  font-size: 44px;
+  margin: 8px;
+}
+
+/* =============== Responsive */
+
+@media (max-width: 1200px) {
+  .main-layout {
+    grid-template-columns: 1fr;
+  }
+  .right-sidebar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+
+    /* margin: 15px; */
+  }
+}
+
+@media (max-width: 768px) {
+  .main-layout {
+  }
+  .right-sidebar {
+    grid-template-columns: 1fr;
+
+    /* margin: 15px; */
+  }
+  .site-header {
+    background: linear-gradient(90deg, rgb(9, 251, 1), rgb(0, 122, 179));
+
+    flex-direction: column;
+  }
+  .tip-photo {
+    display: none;
+  }
+  .tip-box {
+    grid-template-columns: 90px 1fr;
+  }
 }
