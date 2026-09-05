@@ -8,41 +8,164 @@
     <title>Web Workshop : 684259052</title>
     
     <style>
+        /*  ===========การตั้งค่าพื้นฐานของหน้าเว็บ===== */
         html {
+            /* เลื่อนหน้าเว็บแบบนุ่มนวลเวลาคลิกลิงก์ภายในหน้า (เช่น กดจากเมนูเพื่อเลื่อนลงไปด้านล่าง) */
             scroll-behavior: smooth;
         }
+        
         body {
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            margin: 50px;
-            padding: 0;
-            background-color: rgb(188, 237, 244);
-            
-            line-height: 1.5;
+            /* กำหนดแบบอักษรหลักของหน้าเว็บ */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* จัดให้หน้าเว็บอยู่กึ่งกลางจอ (margin: 0 auto) และเว้นระยะห่างด้านบน-ล่าง 40px, ซ้าย-ขวา 20px */
+            margin: 0 auto;
+            padding: 40px 20px;
+            /* กำหนดความกว้างสูงสุดของเนื้อหาไม่ให้กว้างเกินไปจนอ่านยากบนจอใหญ่ */
+            max-width: 960px;
+            /* เปลี่ยนสีพื้นหลังเป็นสีเทาอมฟ้าสว่าง สบายตา */
+            background-color: #cddceb; 
+            /* กำหนดสีตัวอักษรหลัก */
+            color: #334155;
+            /* กำหนดระยะห่างระหว่างบรรทัดให้อ่านง่าย */
+            line-height: 1.7;
         }
-        h1{
-            color :darkblue ;
+
+        /* ============การจัดการหัวข้อ (Headings) และข้อความต้อนรับ====*/
+        h1 {
+            color: #1e3a8a; /* สีน้ำเงินเข้ม */
+            text-align: center; /* จัดกึ่งกลาง */
+            font-size: 2.5rem; /* ขนาดตัวอักษรใหญ่พิเศษ */
+            margin-bottom: 5px; /* ลดระยะห่างด้านล่าง */
         }
+
+        /* เล็งไปที่ย่อหน้าแรกสุดที่ต่อท้าย h1 (ข้อความต้อนรับ Welcome to the HTML tutorial...) */
+        body > p:first-of-type {
+            text-align: center; /* จัดกึ่งกลาง */
+            color: #64748b; /* สีเทา */
+            font-size: 1.1rem; /* ปรับขนาดให้ใหญ่กว่าปกติเล็กน้อย */
+            margin-bottom: 40px; /* ดันเนื้อหาส่วนอื่นให้ห่างออกไป */
+        }
+
         h2 {
-            color:rgb(0, 183, 255) ;
+            color: #2563eb !important; /* บังคับใช้สีน้ำเงินสวยๆ ทับ style เดิมที่มีอยู่ในแท็ก html */
+            margin-top: 50px; /* เว้นระยะห่างจากหัวข้อก่อนหน้า */
+            border-bottom: 2px solid #e2e8f0; /* สร้างเส้นขีดเส้นใต้สีเทาอ่อน */
+            padding-bottom: 10px; /* ระยะห่างระหว่างตัวหนังสือ h2 กับเส้นใต้ */
         }
-        .green-text{
-            color :green;
+
+        .green-text {
+            color: #16a34a; /* กำหนดคลาสสำหรับข้อความสีเขียว */
         }
         
+        /*========== การตกแต่งกล่องข้อความอธิบาย (แท็ก <pre>)=======*/
         pre {
-            background-color: rgb(251, 251, 251);
-            border-left: 4px solid rgb(243, 121, 0);
-            padding: 10px 10px 10px 10px;
-            font-size: 16px;
-            border-radius: 5px;
-            white-space: pre-wrap;
+            background-color: #ffffff; /* พื้นหลังสีขาว */
+            border-left: 5px solid #f97316; /* ขีดสีส้มด้านซ้ายเพิ่มความโดดเด่น */
+            padding: 20px; /* ระยะขอบด้านใน */
+            font-size: 16px; /* ขนาดตัวอักษร */
+            font-family: inherit; /* ใช้ฟอนต์เดียวกับ body แทนฟอนต์แบบเครื่องพิมพ์ดีดของเดิม */
+            border-radius: 8px; /* มุมกล่องโค้งมน */
+            white-space: pre-wrap; /* ป้องกันไม่ให้ข้อความทะลุกล่อง (ตัดขึ้นบรรทัดใหม่) */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); /* ใส่เงาบางๆ ให้กล่องดูลอยขึ้นมา */
+            color: #475569; /* สีตัวอักษรในกล่อง */
         }
-        a{text-decoration: none;}
-        a:hover{text-decoration:  underline;
-        color:  red;}
 
-        .text-center{
-            text-align: center;
+        /* =======================การตกแต่งเมนูหัวข้อ (Topics)==== */
+        ul {
+            list-style: none; /* เอาจุดดำๆ หน้าหัวข้อออก */
+            padding: 0; /* ลบระยะห่างซ้าย */
+            display: grid; /* จัดเรียงแบบ Grid (ตาราง) */
+            /* จัดเรียงปุ่มให้เต็มพื้นที่อัตโนมัติ โดยแต่ละปุ่มมีความกว้างไม่ต่ำกว่า 250px */
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 12px; /* ระยะห่างระหว่างปุ่ม */
+            margin-bottom: 40px;
+        }
+
+        /* ===================ตกแต่งตัวลิงก์ในเมนู Topics ให้กลายเป็นปุ่ม======= */
+        ul li a {
+            display: block; /* ให้ลิงก์ขยายเต็มพื้นที่ของ li */
+            background-color: #ffffff; /* พื้นหลังปุ่มสีขาว */
+            padding: 12px 16px; /* ระยะขอบด้านใน */
+            border-radius: 8px; /* มุมปุ่มโค้งมน */
+            color: #1e293b; /* สีตัวอักษรเข้ม */
+            font-weight: 500; /* ความหนาของตัวอักษร */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* เงาบางๆ */
+            transition: all 0.2s ease; /* ทำให้เอฟเฟกต์ตอนชี้เมาส์มีความนุ่มนวล (ใช้เวลา 0.2 วินาที) */
+            border: 1px solid #e2e8f0; /* เส้นขอบบางๆ สีเทา */
+        }
+
+        /* เอฟเฟกต์เมื่อนำเมาส์ไปชี้ที่ปุ่มเมนู (Hover) */
+        ul li a:hover {
+            background-color: #2563eb; /* เปลี่ยนสีพื้นหลังเป็นน้ำเงิน */
+            color: #ffffff; /* เปลี่ยนสีตัวอักษรเป็นขาว */
+            text-decoration: none; /* ไม่มีขีดเส้นใต้ */
+            transform: translateY(-2px); /* ทำให้ปุ่มเด้งลอยขึ้นเล็กน้อย (2px) */
+        }
+
+        /* ==============================การตกแต่งลิงก์ทั่วไป และ ปุ่มย้อนกลับ  */
+        a {
+            color: #2563eb; /* ลิงก์ทั่วไปสีน้ำเงิน */
+            text-decoration: none; /* ไม่ขีดเส้นใต้ไว้ก่อน */
+            font-weight: 600; /* ตัวหนาเล็กน้อย */
+            transition: color 0.2s; /* เอฟเฟกต์เปลี่ยนสีแบบนุ่มนวล */
+        }
+
+        /* เมื่อนำเมาส์ไปชี้ลิงก์ทั่วไป */
+        a:hover {
+            color: #ea580c; /* เปลี่ยนเป็นสีส้ม */
+            text-decoration: underline; /* แสดงขีดเส้นใต้ */
+        }
+
+        /* ตกแต่งเฉพาะลิงก์ "back to Top" ให้เป็นปุ่ม */
+        a[href="#top"] {
+            display: inline-block;
+            margin-top: 15px; /* ห่างจากกรอบข้อความด้านบน */
+            padding: 8px 16px; /* ระยะห่างด้านใน */
+            background-color: #e2e8f0; /* พื้นหลังสีเทาอ่อน */
+            color: #475569; /* ข้อความสีเทาเข้ม */
+            border-radius: 20px; /* มุมโค้งมนมากเหมือนรูปแคปซูลยา */
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        /* เมื่อชี้เมาส์ที่ปุ่ม back to top */
+        a[href="#top"]:hover {
+            background-color: #cbd5e1; /* สีเข้มขึ้น */
+            color: #1e293b;
+            text-decoration: none;
+        }
+
+        /* ===================การตกแต่งปุ่ม Workshop=== */
+        /* เล็งไปที่ลิงก์ที่มีคำว่า workshop เพื่อทำให้ดูเป็นปุ่มสีเขียว */
+        h2 + a, h2 + p > a, a[href*="workshop"], a[href*="|workshop"] {
+            display: inline-block;
+            padding: 6px 12px;
+            background-color: #10b981; /* พื้นหลังสีเขียว */
+            color: white; /* ตัวอักษรสีขาว */
+            border-radius: 6px;
+            font-size: 14px;
+            margin-bottom: 15px; /* เว้นระยะด้านล่าง */
+        }
+
+        /* เมื่อชี้เมาส์ที่ปุ่ม workshop */
+        h2 + a:hover, h2 + p > a:hover, a[href*="workshop"]:hover, a[href*="|workshop"]:hover {
+            background-color: #059669; /* เปลี่ยนเป็นสีเขียวเข้มขึ้น */
+            text-decoration: none;
+            color: white;
+        }
+
+        /* ========================ส่วน Footer ด้านล่างสุด=====*/
+        hr {
+            border: 0;
+            height: 1px;
+            background: #cbd5e1; /* เปลี่ยนสีเส้นคั่นแนวนอนเป็นสีเทาอ่อน */
+            margin: 40px 0; /* เว้นระยะบน-ล่าง ของเส้น */
+        }
+
+        .text-center {
+            text-align: center; /* จัดกึ่งกลาง */
+            color: #64748b; /* ข้อความลิขสิทธิ์สีเทา */
+            padding-top: 20px;
         }
     </style>
 </head>
@@ -109,10 +232,8 @@
 
 <!-- Heading -->
 <h2 id="heading">Heading</h2>
-
-
 <a href="W03-01-heading.html">workshop</a>
-<a href="02-heading-51.html">  |  workshop</a>
+<a href="02-heading-51.html">|workshop</a>
 
 <pre> 
     HTML headings are defined with the &lt;h1 to h6&gt; tags...
@@ -131,8 +252,7 @@
 <!-- Paragraph -->
 <h2 id="Paragraph">Paragraph</h2>
 
-    <pre> 
-
+<pre> 
 HTML paragraphs are defined with the <p> tag...
 - &lt;p
 </pre>
@@ -212,6 +332,7 @@ HTML links are defined with the <a> tag...
  -->
 <h2 id="Lists">Lists (Ordered and Unordered)
 </h2>
+<p><a href="Work-Lists.html">workshop</a></p>
     <pre> 
 HTML lists are defined with the &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; tags...
 - &lt;ul&gt;: Unordered list
@@ -255,13 +376,14 @@ HTML lists are defined with the &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; tags...
 - Example: &lt;ol style="list-style-type: lower-roman;"&gt;
 
 </pre>
-<p><a href="Work-Lists.html">workshop</a></p>
+
  <a href="#top">back to Top</a>
 
 <!-- Adding Images
  -->
 <h2 id="Images">Adding Images
 </h2>
+<p><a href="Work-Images.html">workshop</a></p>
     <pre> 
 HTML images are defined with the &lt;img&gt; tag...
 - &lt;img src="url" alt="description"&gt;
@@ -304,7 +426,7 @@ object-fit: cover;
 }
 
 </pre>
-<p><a href="Work-Images.html">workshop</a></p>
+
 
  <a href="#top">back to Top</a>
 
@@ -312,8 +434,10 @@ object-fit: cover;
  -->
 <h2 id="Tables">Creating Tables
 </h2>
-    <pre> Workshop 1
-Workshop 2
+<p><a href="">Workshop</a></p>
+
+<p><a href="">Workshop</a></p>
+    <pre> 
 HTML tables are defined with the &lt;table&gt;, &lt;tr&gt;, &lt;th&gt;, and &lt;td&gt; tags...
 - &lt;table&gt;: Table
 - &lt;tr&gt;: Table row
