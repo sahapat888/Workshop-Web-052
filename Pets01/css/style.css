@@ -157,6 +157,75 @@ nav a.active {
   color: var(--sub-text-color);
 }
 
+
+/* card แนะนำ */
+.info-section {
+  background-color: var(--light-bg-color);
+  box-shadow: var(--card-shadow);
+  border-radius: 0.75rem;
+  padding: 2.5rem 2rem;
+  margin-top: 2rem;
+}
+
+.info-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--nav-text-color);
+}
+
+/* จัดการ Grid ให้เรียง 4 คอลัมน์ */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+/* จัดการรูปแบบการ์ดแต่ละใบ */
+.info-card {
+  padding: 1.5rem 1.25rem;
+  border-radius: 0.5rem;
+}
+
+.info-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+
+.info-card p {
+  font-size: 0.9rem;
+  color: var(--sub-text-color);
+}
+
+/* สีพื้นหลังและสีตัวอักษรหัวข้อของการ์ดแต่ละสี */
+.info-blue {
+  background-color: #e0f2fe; 
+}
+.info-blue h3 {
+  color: #1e40af;
+}
+
+.info-purple {
+  background-color: #f3e8ff; 
+}
+.info-purple h3 {
+  color: #6b21a8;
+}
+
+.info-green {
+  background-color: #dcfce7; 
+}
+.info-green h3 {
+  color: #166534;
+}
+
+.info-orange {
+  background-color: #ffedd5; 
+}
+.info-orange h3 {
+  color: #9a3412;
+}
+
+
 /* Footer */
 footer {
   padding-block: 1.25rem;
