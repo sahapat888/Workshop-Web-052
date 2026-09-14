@@ -1,0 +1,328 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* สีหลักเว็บไซต์ */
+  --primary-color: green;
+  --primary-dark-color: rgb(2, 68, 2);
+  --seconary-color: rgb(0, 0, 80);
+
+  /* สีข้อความ */
+  --sub-text-color: grey;
+  --nav-text-color: rgb(39, 38, 38);
+  --light-text-color: white;
+  --dark-text-color: black;
+  /* สีพื้นหลัง */
+  --header-bg-color: rgb(235, 255, 217);
+  --light-bg-color: white;
+  --footer-bg-color: rgb(0, 107, 0);
+  --grey-bg-color: rgb(184, 184, 184);
+  /* สีเงา */
+  --header-shadow: 0 4px 10px rgb(151, 151, 151);
+  --card-shadow: 0 3px 10px rgb(151, 151, 151);
+  /* สีกรอบ */
+  --border-color: rgb(180, 179, 179);
+}
+
+html {
+  scroll-behavior: smooth;
+  /* ถ้าอยากเปลี่ยนขนาดของ rem ต้องเปลี่ยน ขนาดตัวอะกษร */
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  line-height: 1.6;
+
+  background: linear-gradient(
+    135deg,
+    white 10%,
+    rgb(79, 214, 113) 30%,
+    rgb(217, 242, 245) 10%
+  );
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* header */
+.header {
+  background-color: rgba(210, 255, 151, 0.89);
+  box-shadow: 0px 3px 10px rgb(151, 151, 151);
+
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  backdrop-filter: blur(10);
+}
+
+.header-content {
+  text-align: center;
+
+  padding-block: 2rem;
+}
+
+.header-title {
+  color: var(--primary-color);
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.header-subtitle {
+  color: var(--sub-text-color);
+}
+/* Navbar */
+.catagory-nav {
+  text-align: center;
+  padding: 1rem;
+}
+
+.catagory-nav label {
+  color: var(--nav-text-color);
+  background: rgb(236, 235, 235);
+  padding: 0.65rem 1.2rem;
+  margin: 0.3rem;
+
+  border-radius: 10rem;
+  box-shadow: var(--card-shadow);
+
+  display: inline-block;
+  cursor: pointer;
+
+  transition:
+    transform 0.2s,
+    box-shadow 0.3s;
+
+  user-select: none;
+}
+
+.catagory-nav label:hover {
+  transform: translateY(-5px);
+  box-shadow: gray;
+}
+.filter-radio {
+  /* display: none; */
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  clip-path: inset(50%);
+}
+#filter-all:checked ~ .catagory-nav label[for="filter-all"],
+#filter-dog:checked ~ .catagory-nav label[for="filter-dog"],
+#filter-cat:checked ~ .catagory-nav label[for="filter-cat"],
+#filter-bird:checked ~ .catagory-nav label[for="filter-bird"],
+#filter-fish:checked ~ .catagory-nav label[for="filter-fish"],
+#filter-small-pet:checked ~ .catagory-nav label[for="filter-small-pet"] {
+  background-color: var(--seconary-color);
+  color: var(--light-text-color);
+}
+/* ซ่อนแสดงหมวดหมู่ */
+/* ซ่อนแสดงหมวดหมู่ */
+.catagory-title {
+  display: none; /* ลบเครื่องหมายคอมเมนต์ออกเพื่อซ่อนทุกอันก่อน */
+}
+
+/* ตั้งค่าให้แสดงเฉพาะหมวดหมู่ที่ตรงกับปุ่มที่ถูกเลือก */
+#filter-all:checked ~ main .title-all,
+#filter-dog:checked ~ main .title-dog,
+#filter-cat:checked ~ main .title-cat,
+#filter-bird:checked ~ main .title-bird,
+#filter-fish:checked ~ main .title-fish,
+#filter-small-pet:checked ~ main .title-small-pet {
+  display: inline; 
+}
+
+#filter-dog:checked ~ main .pet-card{
+  display: none;
+}
+
+#filter-dog:checked ~ main .pet-dog{
+  display: block;
+}
+
+
+
+/* Main */
+
+.page-title {
+  text-align: center; /*ทำให้textอยู่ตรงกลาง*/
+}
+
+.pet-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 1.5rem;
+}
+
+.pet-title {
+  margin-bottom: 1.5rem;
+}
+
+.pet-card {
+  background-color: var(--light-bg-color);
+  box-shadow: var(--card-shadow);
+
+  border-radius: 0.75rem;
+  overflow: hidden;
+
+  transition: transform 0.25s;
+}
+
+.pet-card:hover {
+  transform: translateY(-5px);
+}
+
+.pet-card img {
+  height: 16.25rem;
+  width: 100%;
+
+  object-fit: cover;
+}
+
+.pet-content {
+  padding: 1.25rem;
+}
+
+.pet-card h2 {
+  color: var(--primary-dark-color);
+}
+
+.breed {
+  color: var(--sub-text-color);
+}
+
+/* card แนะนำ */
+.info-section {
+  background-color: var(--light-bg-color);
+  box-shadow: var(--card-shadow);
+  border-radius: 0.75rem;
+  padding: 2.5rem 2rem;
+  margin-top: 2rem;
+}
+
+.info-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--nav-text-color);
+}
+
+/* จัดการ Grid ให้เรียง 4 คอลัมน์ */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+/* จัดการรูปแบบการ์ดแต่ละใบ */
+.info-card {
+  padding: 1.5rem 1.25rem;
+  border-radius: 0.5rem;
+}
+
+.info-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+
+.info-card p {
+  font-size: 0.9rem;
+  color: var(--sub-text-color);
+}
+
+/* สีพื้นหลังและสีตัวอักษรหัวข้อของการ์ดแต่ละสี */
+.info-blue {
+  background-color: #e0f2fe;
+}
+.info-blue h3 {
+  color: #1e40af;
+}
+
+.info-purple {
+  background-color: #f3e8ff;
+}
+.info-purple h3 {
+  color: #6b21a8;
+}
+
+.info-green {
+  background-color: #dcfce7;
+}
+.info-green h3 {
+  color: #166534;
+}
+
+.info-orange {
+  background-color: #ffedd5;
+}
+.info-orange h3 {
+  color: #9a3412;
+}
+
+/* Learning Form เรียนทำปุ่มแบบเลือก */
+.form-section {
+  background-color: var(--light-bg-color);
+  box-shadow: var(--card-shadow);
+  border-radius: 0.75rem;
+  padding: 2.5rem 2rem;
+  margin-top: 2rem;
+}
+.form-section h2 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 1.5 rem;
+}
+
+.form-section p {
+  text-align: center;
+  color: var(--sub-text-color);
+}
+
+.form-section fieldset {
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+}
+.form-section legend {
+  color: var(--primary-color);
+  padding: 0 0.5rem;
+  font-weight: bold;
+}
+
+.radio-option {
+  display: flex;
+  justify-content: center; /*คำสั่งเอาitemเข้ากลาง */
+  gap: 0.75rem;
+
+  flex-wrap: wrap;
+}
+.radio-item {
+}
+.radio-item input {
+  accent-color: var(--primary-dark-color);
+}
+.radio-item label {
+  background-color: var(--grey-bg-color);
+  color: var(--dark-text-color);
+
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+
+  cursor: pointer;
+}
+.radio-item input:checked + label {
+  color: var(--light-text-color);
+  background-color: var(--primary-color);
+}
+/* Footer */
+footer {
+  padding-block: 1.25rem;
+  background-color: var(--footer-bg-color);
+  text-align: center;
+  color: var(--light-text-color);
+  margin-top: 1.5rem;
+}

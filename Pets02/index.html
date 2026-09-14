@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>คู่มือสัตว์เลี่ยง</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>คู่มือสัตว์เลี้ยง</title>
+    <link rel="stylesheet" href="../css/style-pets02.css">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
@@ -18,22 +18,35 @@
         </div>
     </header>
 
-
+    <input type="radio" id="filter-all" name="catagory"class="filter-radio" checked>
+    <input type="radio" id="filter-dog" name="catagory"class="filter-radio">
+    <input type="radio" id="filter-cat" name="catagory"class="filter-radio">
+    <input type="radio" id="filter-bird" name="catagory"class="filter-radio">
+    <input type="radio" id="filter-fish" name="catagory"class="filter-radio">
+    <input type="radio" id="filter-small-pet" name="catagory"class="filter-radio">
 <!-- navbar -->
-    <nav>
-        <a href="index.html"class="active"><i class="fa-solid fa-house"></i> ทั้งหมด</a>
-        <a href="dog.html"><i class="fa-solid fa-dog"></i> สุนัข</a>  
-        <a href="cat.html"><i class="fa-solid fa-cat"></i> แมว</a>
-        <a href="bird.html"><i class="fa-solid fa-dove"></i> นก</a>
-        <a href="fish.html"><i class="fa-solid fa-fish"></i> ปลา</a>
-        <a href="smallpet.html"><i class="fa-solid fa-paw"></i> สัตว์ขนาดเล็ก</a>
-
+    <nav class="catagory-nav">
+        <label for="filter-all"><i class="fa-solid fa-house"></i>ทั้งหมด</label>
+        <label for="filter-dog"><i class="fa-solid fa-dog"></i>สุนัข</label>
+        <label for="filter-cat"><i class="fa-solid fa-cat"></i>แมว</label>
+        <label for="filter-bird"><i class="fa-solid fa-dove"></i>นก</label>
+        <label for="filter-fish"><i class="fa-solid fa-fish"></i> ปลา</a>นก</label>
+        
+        <label for="filter-small-pet"><i class="fa-solid fa-paw"></i>สัตว์ตัวเล็ก</label>
     </nav>
 
 
     <main class="container">
-        <h2 class="page-title">สัตว์เลี้ยงทั้งหมด</h2>
-           <div class="pet-grid">
+            <h2 class="page-title">
+                <span class="catagory-title title-all">สัตว์เลี้ยงทั้งหมด</span>
+                <span class="catagory-title title-dog">หมวดหมู่สุนัข</span>
+                <span class="catagory-title title-cat">หมวดหมู่แมว</span>
+                <span class="catagory-title title-bird">หมวดหมู่นก</span>
+                <span class="catagory-title title-fish">หมวดหมู่ปลา</span>
+                <span class="catagory-title title-small-pet">หมวดหมู่สัตว์ตัวเล็ก</span>
+
+            </h2>
+            <div class="pet-grid">
             <article class="pet-card">
                 <img src="https://images.unsplash.com/photo-1734966213753-1b361564bab4?auto=format&amp;fit=crop&amp;w=1080&amp;q=80" alt="โกลเด้น รีทรีฟเวอร์">
 
@@ -45,7 +58,7 @@
                 </div>
             </article>
 
-            <article class="pet-card pet-dog">
+            <article class="pet-card">
                 <img src="https://images.unsplash.com/photo-1590419690008-905895e8fe0d?auto=format&amp;fit=crop&amp;w=1080&amp;q=80"  alt="ไซบีเรียน ฮัสกี้">
 
                 <div class="pet-content">
@@ -56,7 +69,7 @@
                 </div>
             </article>
 
-            <article class="pet-card pet-dog">
+            <article class="pet-card">
                 <img src="https://images.unsplash.com/photo-1568152950566-c1bf43f4ab28?auto=format&amp;fit=crop&amp;w=1080&amp;q=80" alt="แมวสยาม">
 
                 <div class="pet-content">
@@ -67,10 +80,10 @@
                 </div>
             </article>
 
-            <article class="pet-card pet-cat">
+            <article class="pet-card">
                 <img src="https://images.unsplash.com/photo-1585137173132-cf49e10ad27d?auto=format&amp;fit=crop&amp;w=1080&amp;q=80" alt="แมวเปอร์เซีย">
 
-                <div class="pet-content pet-cat">
+                <div class="pet-content">
                     <h2>แมวเปอร์เซีย</h2>
                     <p class="breed">Persian Cat</p>
                     <p>แมวขนยาวที่มีนิสัยสงบและอ่อนโยน</p>
@@ -124,31 +137,74 @@
         </div>
         </div>
         <!-- card คำแนะนำ -->
-        <div class="info-section">
+        <section class="info-section">
     
                 <h2 class="info-title">💡 คำแนะนำในการเลือกสัตว์เลี้ยง</h2>
                 <div class="info-grid">
                     <article class="info-card info-blue">
-                        <h3>พิจารณาไลฟ์สไตล์ของคุณ</h3>
-                        <p>หากคุณมีเวลาจำกัด สัตว์เลี้ยงอย่างปลาหรือแมวอาจเหมาะกับคุณมากกว่าสุนัขที่ต้องการความใส่ใจมาก</p>
+                            <h3>พิจารณาไลฟ์สไตล์ของคุณ</h3>
+                            <p>หากคุณมีเวลาจำกัด สัตว์เลี้ยงอย่างปลาหรือแมวอาจเหมาะกับคุณมากกว่าสุนัขที่ต้องการความใส่ใจมาก</p>
                     </article>
                     <article class="info-card info-purple">
-                        <h3>พื้นที่อยู่อาศัย</h3>
-                        <p>ห้องเล็กหรือคอนโดอาจไม่เหมาะกับสุนัขพันธุ์ใหญ่ แต่เหมาะกับแมว กระต่าย หรือหนูแฮมสเตอร์</p>
+                            <h3>พื้นที่อยู่อาศัย</h3>
+                            <p>ห้องเล็กหรือคอนโดอาจไม่เหมาะกับสุนัขพันธุ์ใหญ่ แต่เหมาะกับแมว กระต่าย หรือหนูแฮมสเตอร์</p>
                     </article>
                     <article class="info-card info-green">
-                        <h3>งบประมาณ</h3>
-                        <p>นอกจากค่าอาหารแล้ว ยังต้องคิดถึงค่ารักษาพยาบาล ค่าอุปกรณ์ และค่าใช้จ่ายอื่นๆ</p>
+                            <h3>งบประมาณ</h3>
+                            <p>นอกจากค่าอาหารแล้ว ยังต้องคิดถึงค่ารักษาพยาบาล ค่าอุปกรณ์ และค่าใช้จ่ายอื่นๆ</p>
                     </article>
                     <article class="info-card info-orange">
-                        <h3>อายุขัยของสัตว์</h3>
-                        <p>นกแก้วสามารถมีชีวิตได้ถึง 80 ปี ในขณะที่หนูแฮมสเตอร์มีอายุเพียง 2-3 ปี จึงควรพิจารณาภาระผูกพันระยะยาว</p>
+                            <h3>อายุขัยของสัตว์</h3>
+                            <p>นกแก้วสามารถมีชีวิตได้ถึง 80 ปี ในขณะที่หนูแฮมสเตอร์มีอายุเพียง 2-3 ปี จึงควรพิจารณาภาระผูกพันระยะยาว</p>
                     </article>
                 </div>
     
-        </div>
+        </section>
 
-        .
+        <!-- Learning about form ทำปุ่มเลือกได้-->
+        <section class="form-section">
+            <h2>📝ทดลองเลือกประเภทสัตว์ที่คุณสนใจ</h2>
+             <p>คลิกข้อความหรือปุ่มวงกลมเพื่อเลือกประเภทสัตว์ที่สนใจ โดยสามารถเลือกได้ครั้งละ 1 ประเภท</p>
+
+            <form action="">
+                <fieldset>
+                    <legend>เลือกประเภทสัตว์เลี้ยง</legend>
+                <div class="radio-option">
+                    <div class="radio-item">
+                        <input type="radio" id="farvorite-dog"
+                        name="farvorite-pet" value="dog" checked>
+                        <label for="farvorite-dog">สุนัข</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="farvorite-cat"
+                        name="farvorite-pet" value="cat">
+                        <label for="farvorite-cat">แมว</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="farvorite-bird"
+                        name="farvorite-pet" value="bird">
+                        <label for="farvorite-bird">นก</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="farvorite-fish"
+                        name="farvorite-pet" value="fish">
+                        <label for="farvorite-fish">ปลา</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="farvorite-small-pet"
+                        name="farvorite-pet" value="small-pet">
+                        <label for="farvorite-small-pet">สัตว์ตัวเล็ก</label>
+                    </div>
+                </div>
+
+
+                </fieldset>
+                 
+            </form>
+         </section>
+
+
+
     </main>
     <footer>
         <p>&copy;2026 คู่มือสัตว์เลี้ยง</p>
@@ -157,3 +213,4 @@
 
 </body>
 </html>
+
