@@ -107,8 +107,8 @@ body {
   /* display: none; */
   position: absolute;
   overflow: hidden;
-  width: 1px;
-  height: 1px;
+  width: 0.1px;
+  height: 0.1px;
   clip-path: inset(50%);
 }
 #filter-all:checked ~ .catagory-nav label[for="filter-all"],
@@ -117,10 +117,10 @@ body {
 #filter-bird:checked ~ .catagory-nav label[for="filter-bird"],
 #filter-fish:checked ~ .catagory-nav label[for="filter-fish"],
 #filter-small-pet:checked ~ .catagory-nav label[for="filter-small-pet"] {
-  background-color: var(--seconary-color);
+  background-color: var(--primary-color);
   color: var(--light-text-color);
 }
-/* ซ่อนแสดงหมวดหมู่ */
+
 /* ซ่อนแสดงหมวดหมู่ */
 .catagory-title {
   display: none; /* ลบเครื่องหมายคอมเมนต์ออกเพื่อซ่อนทุกอันก่อน */
@@ -136,11 +136,21 @@ body {
   display: inline; 
 }
 
-#filter-dog:checked ~ main .pet-card{
+#filter-dog:checked ~ main .pet-card,
+#filter-cat:checked ~ main .pet-card,
+#filter-bird:checked ~ main .pet-card,
+#filter-fish:checked ~ main .pet-card,
+#filter-small-pet:checked ~ main .pet-card
+{
   display: none;
 }
 
-#filter-dog:checked ~ main .pet-dog{
+#filter-dog:checked ~ main .pet-dog,
+#filter-cat:checked ~ main .pet-cat,
+#filter-bird:checked ~ main .pet-bird,
+#filter-fish:checked ~ main .pet-fish,
+#filter-small-pet:checked ~ main .pet-small
+{
   display: block;
 }
 

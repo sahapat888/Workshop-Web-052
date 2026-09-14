@@ -201,31 +201,31 @@ nav a.active {
   background-color: #e0f2fe; 
 }
 .info-blue h3 {
-  color: #1e40af;
+  color: #1034ab;
 }
 
 .info-purple {
   background-color: #f3e8ff; 
 }
 .info-purple h3 {
-  color: #6b21a8;
+  color: #6307ae;
 }
 
 .info-green {
   background-color: #dcfce7; 
 }
 .info-green h3 {
-  color: #166534;
+  color: #0c6a30;
 }
 
 .info-orange {
   background-color: #ffedd5; 
 }
 .info-orange h3 {
-  color: #9a3412;
+  color: #953210;
 }
 
-
+    
 /* Footer */
 footer {
   padding-block: 1.25rem;
