@@ -11,10 +11,13 @@
   --seconary-color: rgb(0, 0, 80);
 
   /* สีข้อความ */
-  --sub-text-color: grey;
+  --sub-text-color: rgb(199, 199, 199);
   --nav-text-color: rgb(39, 38, 38);
   --light-text-color: white;
   --dark-text-color: black;
+  --red-text-color: red;
+  --blue-text-color: blue;
+
   /* สีพื้นหลัง */
   --header-bg-color: rgb(235, 255, 217);
   --light-bg-color: white;
@@ -46,6 +49,7 @@ body {
 
 .container {
   max-width: 1200px;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -57,7 +61,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 1;
-  backdrop-filter: blur(10);
+  backdrop-filter: blur(10px);ช
 }
 
 .header-content {
@@ -87,7 +91,6 @@ body {
   margin: 0.3rem;
 
   border-radius: 10rem;
-  box-shadow: var(--card-shadow);
 
   display: inline-block;
   cursor: pointer;
@@ -101,10 +104,9 @@ body {
 
 .catagory-nav label:hover {
   transform: translateY(-5px);
-  box-shadow: gray;
+  box-shadow: 0 4px 8px gray; 
 }
 .filter-radio {
-  /* display: none; */
   position: absolute;
   overflow: hidden;
   width: 0.1px;
@@ -123,7 +125,7 @@ body {
 
 /* ซ่อนแสดงหมวดหมู่ */
 .catagory-title {
-  display: none; /* ลบเครื่องหมายคอมเมนต์ออกเพื่อซ่อนทุกอันก่อน */
+  display: none;
 }
 
 /* ตั้งค่าให้แสดงเฉพาะหมวดหมู่ที่ตรงกับปุ่มที่ถูกเลือก */
@@ -133,39 +135,35 @@ body {
 #filter-bird:checked ~ main .title-bird,
 #filter-fish:checked ~ main .title-fish,
 #filter-small-pet:checked ~ main .title-small-pet {
-  display: inline; 
+  display: inline;
 }
 
 #filter-dog:checked ~ main .pet-card,
 #filter-cat:checked ~ main .pet-card,
 #filter-bird:checked ~ main .pet-card,
 #filter-fish:checked ~ main .pet-card,
-#filter-small-pet:checked ~ main .pet-card
-{
+#filter-small-pet:checked ~ main .pet-card {
   display: none;
 }
 
-#filter-dog:checked ~ main .pet-dog,
-#filter-cat:checked ~ main .pet-cat,
-#filter-bird:checked ~ main .pet-bird,
-#filter-fish:checked ~ main .pet-fish,
-#filter-small-pet:checked ~ main .pet-small
-{
+#filter-dog:checked ~ main .show-dog,
+#filter-cat:checked ~ main .show-cat,
+#filter-bird:checked ~ main .show-bird,
+#filter-fish:checked ~ main .show-fish,
+#filter-small-pet:checked ~ main .show-small-pet {
   display: block;
 }
-
-
 
 /* Main */
 
 .page-title {
-  text-align: center; /*ทำให้textอยู่ตรงกลาง*/
+  text-align: center;
 }
 
 .pet-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  padding: 0 50px;
   gap: 1.5rem;
 }
 
@@ -206,6 +204,68 @@ body {
   color: var(--sub-text-color);
 }
 
+/* ปุ่ม รายละเอียดเพิ่มเติม */
+.pet-info {
+  list-style-type: none;
+}
+.info-lifespan {
+  color: var(--blue-text-color);
+}
+.info-size {
+  color: var(--red-text-color);
+}
+.info-temperament {
+  color: var(--primary-color);
+}
+
+.pet-btn {
+  background-color: var(--primary-color);
+  color: var(--light-text-color);
+  padding: 0.5rem;
+  margin-block: 1rem;
+  border-radius: 0.5rem;
+
+  text-align: center;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+.pet-btn:hover {
+  background-color: var(--primary-dark-color);
+  transform: translateY(-10px);
+}
+
+.hide-detail {
+  display: none;
+}
+
+.pet-details[open] .show-detail {
+  display: none;
+}
+.pet-details[open] .hide-detail {
+  display: inline;
+}
+
+.pet-details summary {
+  list-style: none;
+}
+.pet-details-body {
+  border-top: 1px solid rgb(0, 0, 0);
+  padding-top: 1rem;
+
+  animation: appear 1s ease-out;
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* card แนะนำ */
 .info-section {
   background-color: var(--light-bg-color);
@@ -224,7 +284,7 @@ body {
 /* จัดการ Grid ให้เรียง 4 คอลัมน์ */
 .info-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
   gap: 1.5rem;
 }
 
@@ -273,7 +333,76 @@ body {
   color: #9a3412;
 }
 
-/* Learning Form เรียนทำปุ่มแบบเลือก */
+/* Table ========================================================= */
+
+.pet-table{
+ border-collapse: collapse;
+
+
+ width: 100%;
+ table-layout: fixed;
+
+
+ overflow-wrap: break-word;
+
+
+ margin-top: 2rem;
+
+
+ background-color: rgb(209, 240, 201);
+}
+
+
+.pet-table th,
+.pet-table td {
+  border: 1px solid rgb(240, 247, 244);
+  padding: 1rem;
+  vertical-align: top;
+}
+
+
+.pet-table caption{
+  padding: 0.75rem;
+  font-weight: bold;
+}
+
+
+.pet-table thead th{
+  background-color: var(--primary-color);
+  color: var(--light-text-color);
+}
+
+
+.pet-table tbody th{
+  background-color: rgb(200, 236, 193);
+  color: var(--light-text-color);
+
+
+  text-align: left;
+
+
+  white-space: nowrap;
+}
+
+
+
+
+.pet-table tbody tr:nth-child(even){
+   background-color: #b1c8e9;
+}
+.pet-table tbody tr:hover{
+   background-color: #faf4f4;
+}
+
+
+/* .pet-table th:nth-child(1) {width: 300px;} */
+.pet-table th:nth-child(2) {width: 300px;} 
+.pet-table th:nth-child(3) {width: 150px;}
+.pet-table th:nth-child(4) {width: 300px;} 
+.pet-table th:nth-child(5) {width: 150px;}
+
+/* Learning Form เรียนทำปุ่มแบบเลือก ==================
+=============*/
 .form-section {
   background-color: var(--light-bg-color);
   box-shadow: var(--card-shadow);
@@ -284,7 +413,7 @@ body {
 .form-section h2 {
   text-align: center;
   color: var(--primary-color);
-  margin-bottom: 1.5 rem;
+  margin-bottom: 1.5rem; 
 }
 
 .form-section p {
@@ -305,13 +434,12 @@ body {
 
 .radio-option {
   display: flex;
-  justify-content: center; /*คำสั่งเอาitemเข้ากลาง */
+  justify-content: center;
   gap: 0.75rem;
 
   flex-wrap: wrap;
 }
-.radio-item {
-}
+
 .radio-item input {
   accent-color: var(--primary-dark-color);
 }
@@ -328,6 +456,7 @@ body {
   color: var(--light-text-color);
   background-color: var(--primary-color);
 }
+
 /* Footer */
 footer {
   padding-block: 1.25rem;
@@ -335,4 +464,22 @@ footer {
   text-align: center;
   color: var(--light-text-color);
   margin-top: 1.5rem;
+}
+
+/* Responsive */
+
+@media (max-width: 992px) {
+  .pet-grid {
+  }
+}
+
+@media (max-width: 768px) {
+  .pet-grid {
+  }
+  .catagory-nav label {
+    display: block;
+    margin: 0.5rem 1rem;
+
+    border-radius: 10px;
+  }
 }
