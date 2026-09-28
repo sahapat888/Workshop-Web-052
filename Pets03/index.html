@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>คู่มือสัตว์เลี้ยง</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style-pets03.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">🐾คู่มือสัตว์เลี้ยง</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">ทั้งหมด</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">สุนัข</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">แมว</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">นก</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">ปลา</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">สัตว์ขนาดเล็ก</a>
+                        </li>
+                    </ul>
+
+                    <!-- ปุ่ม Dark/Light Mode อยู่มุมขวาบน -->
+                    <button id="themeToggle" class="btn btn-outline-secondary" type="button">
+                        🌙 Dark
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel"
+        data-bs-interval="3000">
+        <!-- ปุ่มบอกลำดับภาพ -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+        </div>
+
+        <!-- รูปภาพใน carousel (รวมทั้ง 4 สไลด์ไว้ภายใน carousel-inner) -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://images.unsplash.com/photo-1734966213753-1b361564bab4?auto=format&amp;fit=crop&amp;w=1600&amp;q=85"
+                    class="d-block w-100" alt="สุนัขโกลเด้น รีทรีฟเวอร์">
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1568152950566-c1bf43f4ab28?auto=format&amp;fit=crop&amp;w=1600&amp;q=85"
+                    class="d-block w-100" alt="แมวสยาม">
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1584888890205-9b49eaf0c660?auto=format&amp;fit=crop&amp;w=1600&amp;q=85"
+                    class="d-block w-100" alt="นกแก้วสีสันสวยงาม">
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1622349817799-067c32295df2?auto=format&amp;fit=crop&amp;w=1600&amp;q=85"
+                    class="d-block w-100" alt="กระต่ายสีขาว">
+            </div>
+        </div>
+
+        <!-- ปุ่มเลื่อนภาพก่อนหน้าและถัดไป -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- โครงสร้างเนื้อหา -->
+    <main class="main">
+        <div class="container">
+
+
+            <section class="card info-section ">
+
+                <h2 class="info-title">💡 คำแนะนำในการเลือกสัตว์เลี้ยง</h2>
+                <div class="info-grid ">
+                    <article class="card card-body bg-body-tertirary info-blue">
+                        <h4 class="card-title text-primary">พิจารณาไลฟ์สไตล์ของคุณ</h4>
+                        <p class="card-text">หากคุณมีเวลาจำกัด
+                            สัตว์เลี้ยงอย่างปลาหรือแมวอาจเหมาะกับคุณมากกว่าสุนัขที่ต้องการความใส่ใจมาก</p>
+                    </article>
+                    <article class="card card-body bg-body-tertirary info-purple">
+                        <h4 class="card-title text-danger">พื้นที่อยู่อาศัย</h4>
+                        <p class="card-text">ห้องเล็กหรือคอนโดอาจไม่เหมาะกับสุนัขพันธุ์ใหญ่ แต่เหมาะกับแมว กระต่าย
+                            หรือหนูแฮมสเตอร์</p>
+                    </article>
+                    <article class="card card-body bg-body-tertirary info-green">
+                        <h4 class="card-title text-success">งบประมาณ</h4>
+                        <p class="card-text">นอกจากค่าอาหารแล้ว ยังต้องคิดถึงค่ารักษาพยาบาล ค่าอุปกรณ์
+                            และค่าใช้จ่ายอื่นๆ</p>
+                    </article>
+                    <article class="card card-body bg-body-tertirary info-orange">
+                        <h4 class="card-title text-warning">อายุขัยของสัตว์</h4>
+                        <p class="card-text">นกแก้วสามารถมีชีวิตได้ถึง 80 ปี ในขณะที่หนูแฮมสเตอร์มีอายุเพียง 2-3 ปี
+                            จึงควรพิจารณาภาระผูกพันระยะยาว</p>
+                    </article>
+                </div>
+
+
+        </div>
+
+        </section>
+
+
+        <div class="info-section" id="recommendationSection">
+
+            <h2 class="info-title">
+                🔍 ค้นหาสัตว์เลี้ยงที่เหมาะกับคุณ
+            </h2>
+
+            <form id="petRecommendationForm">
+
+                <!-- Row 1 -->
+                <div class="row g-3 mb-3">
+
+                    <!-- Lifestyle -->
+                    <div class="col-md-6">
+                        <label for="lifestyle" class="form-label">
+                            ไลฟ์สไตล์ของคุณ:
+                        </label>
+
+                        <select id="lifestyle" name="lifestyle" class="form-select" required>
+                            <option value="">เลือกไลฟ์สไตล์</option>
+                            <option value="active">ชอบกิจกรรมกลางแจ้ง กระฉับกระเฉง</option>
+                            <option value="moderate">กิจกรรมปานกลาง เวลาว่างพอสมควร</option>
+                            <option value="quiet">ชอบความเงียบ อยู่บ้านเป็นส่วนใหญ่</option>
+                            <option value="busy">ยุ่งมาก เวลาจำกัด</option>
+                        </select>
+                    </div>
+
+
+                    <!-- Budget -->
+                    <div class="col-md-6">
+                        <label for="budget" class="form-label">
+                            งบประมาณต่อเดือน:
+                        </label>
+
+                        <select id="budget" name="budget" class="form-select" required>
+                            <option value="">เลือกงบประมาณ</option>
+                            <option value="low">น้อยกว่า 1,000 บาท</option>
+                            <option value="medium">1,000 - 3,000 บาท</option>
+                            <option value="high">3,000 - 5,000 บาท</option>
+                            <option value="premium">มากกว่า 5,000 บาท</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <!-- <Row 1 -->
+                <div class="row g-3 mb-3">
+
+
+                    <div class="col-md-6">
+                        <label for="experience" class="form-label">
+                            ประสบการณ์เลี้ยงสัตว์:Experience
+                        </label>
+
+                        <select id="experience" name="experience" class="form-select" required>
+                            <option value="">เลือกประสบการณ์</option>
+                            <option value="beginner">ไม่มีประสบการณ์</option>
+                            <option value="some">มีประสบการณ์บ้าง</option>
+                            <option value="experienced">มีประสบการณ์มาก</option>
+                            <option value="expert">ผู้เชี่ยวชาญ</option>
+                        </select>
+                    </div>
+
+
+                    <div class="col-md-6">
+                        <label for="livingSpace" class="form-label">
+                            พื้นที่อยู่อาศัย: Living Space
+                        </label>
+
+                        <select id="livingSpace" name="livingSpace" class="form-select" required>
+                            <option value="">เลือกพื้นที่อยู่อาศัย</option>
+                            <option value="house-large">บ้านใหญ่พร้อมสวน</option>
+                            <option value="house-small">บ้านขนาดเล็ก</option>
+                            <option value="condo">คอนโด/อพาร์ตเมนต์</option>
+                            <option value="studio">ห้องสตูดิโอ</option>
+                        </select>
+                    </div>
+                </div>
+
+                -->
+                <!-- Row 2 : Time -->
+                <div class="mb-4">
+
+                    <label class="form-label">เวลาว่างต่อวัน:</label>
+
+                    <div class="d-flex flex-wrap gap-3">
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="timeAvailable" id="timeLess1"
+                                value="less1" required>
+
+                            <label class="form-check-label" for="timeLess1">
+                                น้อยกว่า 1 ชั่วโมง
+                            </label>
+                        </div>
+
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="timeAvailable" id="time1to3"
+                                value="1to3">
+
+                            <label class="form-check-label" for="time1to3">
+                                1-3 ชั่วโมง
+                            </label>
+                        </div>
+
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="timeAvailable" id="time3to6"
+                                value="3to6">
+
+                            <label class="form-check-label" for="time3to6">
+                                3-6 ชั่วโมง
+                            </label>
+                        </div>
+
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="timeAvailable" id="timeMore6"
+                                value="more6">
+
+                            <label class="form-check-label" for="timeMore6">
+                                มากกว่า 6 ชั่วโมง
+                            </label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Row 3 : Preferences -->
+                <div class="mb-4">
+                    <label class="form-label">ความต้องการพิเศษ:</label>
+
+                    <div class="d-flex flex-wrap gap-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="preferences" id="prefQuiet"
+                                value="quiet">
+                            <label class="form-check-label" for="prefQuiet">
+                                เงียบ ไม่ส่งเสียงดัง
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="preferences" id="prefSocial"
+                                value="social">
+                            <label class="form-check-label" for="prefSocial">
+                                เข้ากับคนง่าย
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="preferences" id="prefLowMaintenance"
+                                value="lowMaintenance">
+                            <label class="form-check-label" for="prefLowMaintenance">
+                                ดูแลง่าย
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="preferences" id="prefPlayful"
+                                value="playful">
+                            <label class="form-check-label" for="prefPlayful">
+                                ชอบเล่น กระฉับกระเฉง
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="preferences" id="prefCuddly"
+                                value="cuddly">
+                            <label class="form-check-label" for="prefCuddly">
+                                ชอบกอด อ่อนโยน
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Buttons -->
+                <div class="d-flex flex-wrap gap-2 justify-content-center">
+                    <button type="submit" class="btn btn-primary">
+                        🔍 ค้นหาสัตว์เลี้ยงที่เหมาะสม
+                    </button>
+
+                    <button type="reset" class="btn btn-outline-secondary">
+                        🔄 เริ่มใหม่
+                    </button>
+                </div>
+            </form>
+
+        </div>
+
+        </div>
+        <!-- แสดงปุ่มmenu -->
+        <section class="category-section" aria-label="กรองสัตว์เลี้ยงตามหมวดหมู่">
+            <h2 class="pet-title">เลือกหมวดหมู่สัตว์เลี้ยง</h2>
+            <div class="category-filter" id="categoryFilter"></div>
+        </section>
+
+        <!-- แสดงปุ่มmenu -->
+        <div class="pet-grid" id="petGrid">
+
+            <!-- การดรูปสัตว์จะ ถูก render โดย java script  -->
+        </div>
+
+
+    </main>
+
+
+    <!-- footer -->
+    <footer class="footer mt-auto py-3 bg-body-tertiary text-center">
+        <div class="container-fluid">
+            <span class="text-body-secondary">
+                <p class="mb-0">&copy; 2026 คู่มือสัตว์เลี้ยง</p>
+            </span>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <!-- สคริปต์ Bootstrap & Dark/Light Mode -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script>
+        const button = document.getElementById("themeToggle");
+
+        button.addEventListener("click", () => {
+            const html = document.documentElement;
+
+            if (html.getAttribute("data-bs-theme") === "dark") {
+                html.setAttribute("data-bs-theme", "light");
+                button.textContent = "🌙 Dark";
+                button.className = "btn btn-outline-secondary";
+            } else {
+                html.setAttribute("data-bs-theme", "dark");
+                button.textContent = "☀️ Light";
+                button.className = "btn btn-outline-warning";
+            }
+        });
+    </script>
+</body>
+
+
+
+</html>
