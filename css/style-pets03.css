@@ -2,7 +2,7 @@
   /* สีหลักเว็บไซต์ */
   --primary-color: green;
   --primary-dark-color: rgb(2, 68, 2);
-  --seconary-color: rgb(0, 0, 80);
+  --secondary-color: rgb(0, 0, 80); /* แก้ไข typo */
 
   /* สีข้อความ */
   --sub-text-color: rgb(199, 199, 199);
@@ -28,15 +28,13 @@
 .carousel-inner,
 .carousel-item img {
   width: 100%;
-  /* max-height: 550px; */
   height: calc(100vh - 160px);
-
   object-fit: cover;
   object-position: center;
 }
-/* Info=mation card  */
+
+/* Information card  */
 .info-section {
-  /* background-color: var(--light-bg-color); */
   box-shadow: var(--card-shadow);
   border-radius: 0.75rem;
   padding: 2.5rem 2rem;
@@ -46,7 +44,6 @@
 .info-title {
   text-align: center;
   margin-bottom: 2rem;
-  /* color: var(--nav-text-color); */
 }
 
 /* จัดการ Grid ให้เรียง 4 คอลัมน์ */
@@ -73,46 +70,12 @@
 }
 
 /* สีพื้นหลังและสีตัวอักษรหัวข้อของการ์ดแต่ละสี */
-.info-blue {
-  border-left: 5px solid rgb(0, 140, 255);
-}
-.info-purple {
-  border-left: 5px solid rgb(195, 0, 255);
-}
-.info-green {
-  border-left: 5px solid rgb(60, 255, 0);
-}
-.info-orange {
-  border-left: 5px solid rgb(255, 153, 0);
-}
-
-/* .info-blue h3 {
-  color: #1e40af;
-}
-
-.info-purple {
-  background-color: #f3e8ff;
-}
-.info-purple h3 {
-  color: #6b21a8;
-}
-
-.info-green {
-  background-color: #dcfce7;
-}
-.info-green h3 {
-  color: #166534;
-}
-
-.info-orange {
-  background-color: #ffedd5;
-}
-.info-orange h3 {
-  color: #9a3412;
-} */
+.info-blue { border-left: 5px solid rgb(0, 140, 255); }
+.info-purple { border-left: 5px solid rgb(195, 0, 255); }
+.info-green { border-left: 5px solid rgb(60, 255, 0); }
+.info-orange { border-left: 5px solid rgb(255, 153, 0); }
 
 /* Pet Grid */
-
 .category-section {
   margin: 2rem 0;
 }
@@ -154,15 +117,14 @@
 
 .pet-title {
   margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .pet-card {
   background-color: var(--light-bg-color);
   box-shadow: var(--card-shadow);
-
   border-radius: 0.75rem;
   overflow: hidden;
-
   transition: transform 0.25s;
 }
 
@@ -170,10 +132,24 @@
   transform: translateY(-5px);
 }
 
+.pet-image-container {
+  position: relative;
+}
+
+.pet-category-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--primary-color);
+  color: var(--light-text-color);
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+}
+
 .pet-card img {
   height: 16.25rem;
   width: 100%;
-
   object-fit: cover;
 }
 
@@ -181,62 +157,73 @@
   padding: 1.25rem;
 }
 
-.pet-card h2 {
+.pet-card h2, .pet-card h3 {
   color: var(--primary-dark-color);
 }
 
-.breed {
+.pet-breed {
   color: var(--sub-text-color);
 }
 
-/* ปุ่ม รายละเอียดเพิ่มเติม */
-.pet-info {
-  list-style-type: none;
-}
-.info-lifespan {
-  color: var(--blue-text-color);
-}
-.info-size {
-  color: var(--red-text-color);
-}
-.info-temperament {
-  color: var(--primary-color);
+/* ข้อมูลย่อยใน Card */
+.pet-info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
+/* ปุ่ม รายละเอียดเพิ่มเติม */
 .pet-btn {
   background-color: var(--primary-color);
   color: var(--light-text-color);
   padding: 0.5rem;
   margin-block: 1rem;
   border-radius: 0.5rem;
-
   text-align: center;
-
   cursor: pointer;
   transition: 0.2s;
+  border: none;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 }
+
 .pet-btn:hover {
   background-color: var(--primary-dark-color);
-  transform: translateY(-10px);
+  transform: translateY(-5px);
 }
 
-.hide-detail {
-  display: none;
+.pet-details-section {
+  margin-top: 1rem;
 }
 
-.pet-details[open] .show-detail {
-  display: none;
-}
-.pet-details[open] .hide-detail {
-  display: inline;
+.pet-details-title {
+  font-size: 1rem;
+  color: var(--primary-dark-color);
+  margin-bottom: 0.5rem;
 }
 
-.pet-details summary {
-  list-style: none;
+.pet-details-text {
+  font-size: 0.9rem;
+  color: var(--nav-text-color);
 }
-.pet-details-body {
-  border-top: 1px solid rgb(0, 0, 0);
+
+/* สำคัญ: คลาสที่ JS ใช้ในการซ่อนข้อมูล */
+.hidden {
+  display: none !important;
+}
+
+/* การปิดเปิดข้อมูลเก่าที่ไม่ได้ใช้ถูกลบออก (เช่น show-detail/hide-detail) เพื่อไม่ให้สับสน */
+.pet-details {
+  border-top: 1px solid var(--border-color);
   padding-top: 1rem;
+  animation: appear 0.5s ease-out;
+}
 
-  animation: appear 1s ease-out;
+@keyframes appear {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
 }

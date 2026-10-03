@@ -1,6 +1,3 @@
-// const สร้างตัวแปรที่ไม่สามารถกำหนดค่าใหม่ภายหลังได้
-// let ใช้ประกาศตัวแปรที่สามารถเปลี่ยนค่าได้ภายหลัง
-
 // ข้อมูลสัตว์เลี้ยง
 const pets = [
   {
@@ -118,8 +115,6 @@ const pets = [
 ];
 
 // หมวดหมู่
-// สำหรับเก็บข้อมูลหมวดหมู่สัตว์เลี้ยง โดยจัดเก็บในรูปแบบ Array ที่ภายในประกอบด้วย Object หลายรายการ
-
 const categories = [
   { name: "ทั้งหมด", value: "all", icon: "🏠" },
   { name: "สุนัข", value: "สุนัข", icon: "🐕" },
@@ -129,11 +124,8 @@ const categories = [
   { name: "สัตว์เลี้ยงขนาดเล็ก", value: "สัตว์เลี้ยงขนาดเล็ก", icon: "🐰" },
 ];
 
-// สถานะ
-// ตอนเริ่มต้นให้แสดงสัตว์เลี้ยงทุกหมวดหมู่
 let selectedCategory = "all";
 
-// สร้าง SVG icons
 const icons = {
   clock:
     '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>',
@@ -144,60 +136,13 @@ const icons = {
   info: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>',
 };
 
-// =============================================
-// (1) เริ่มต้น
-// =============================================
-
-// โค้ดส่วนนี้ทำหน้าที่ รอให้โครงสร้าง HTML โหลดเสร็จก่อน แล้วจึงแสดงหมวดหมู่ แสดงข้อมูลสัตว์เลี้ยง และเตรียมฟอร์มให้ตอบสนองเมื่อผู้ใช้กดส่งข้อมูล
-
-// document หมายถึงเอกสาร HTML ของหน้าเว็บ
-// addEventListener() ใช้กำหนดให้โปรแกรมรอเหตุการณ์บางอย่าง
-// 'DOMContentLoaded' คือเหตุการณ์ที่เกิดขึ้นเมื่อเบราว์เซอร์อ่านและสร้างโครงสร้าง HTML หรือ DOM เสร็จแล้ว
-// function() { ... } คือฟังก์ชันที่จะทำงานเมื่อเหตุการณ์นั้นเกิดขึ้น
-
 document.addEventListener("DOMContentLoaded", function () {
-  // รอให้โครงสร้าง HTML โหลดเสร็จ
-  // เมื่อโครงสร้าง HTML พร้อมใช้งานแล้ว ให้ทำคำสั่งทั้งหมดที่อยู่ภายในฟังก์ชันนี้
-  // เรียก renderCategories() เพื่อแสดงหมวดหมู่
   renderCategories();
   renderPets();
 });
 
-// =============================================
-// (2) แสดงหมวดหมู่
-// ====================================================
-
-// คำว่า render ในการพัฒนาเว็บไซต์หมายถึงการนำข้อมูลมาสร้างและแสดงผลบนหน้าเว็บ
-// const สร้างตัวแปรที่ไม่ต้องการกำหนด Element ใหม่
-// categoryFilter ชื่อตัวแปรที่ใช้เก็บ Element
-// document หมายถึงเอกสาร HTML
-// getElementById() ค้นหา Element จาก id
-
-// categories คือ Array ที่เก็บข้อมูลหมวดหมู่
-// map() จะวนผ่านข้อมูลทุกสมาชิก และเปลี่ยนข้อมูลแต่ละ Object ให้เป็นข้อความ HTML ของปุ่ม
-// แต่ละรอบ ตัวแปร category จะเก็บ Object ปัจจุบัน
-/*
-        category = {
-            name: 'สุนัข',
-            value: 'สุนัข',
-            icon: '🐕'
-            };
-        */
-// เป็น Arrow function ที่รับ Parameter ชื่อ category
-
-/*
-        function(category) {
-            return `...`;
-        }
-        */
-// Backtick:   ` =  Template literal
-// เขียนข้อความหลายบรรทัดได้
-// แทรกค่าตัวแปรด้วย ${...} ได้
-// เหมาะกับการสร้าง HTML ใน JavaScript
-
 function renderCategories() {
   const categoryFilter = document.getElementById("categoryFilter");
-
   if (!categoryFilter) return;
 
   categoryFilter.innerHTML = categories
@@ -210,7 +155,7 @@ function renderCategories() {
           <span>${category.icon}</span>
           <span>${category.name}</span>
         </button>
-        `,
+        `
     )
     .join("");
 
@@ -221,65 +166,11 @@ function renderCategories() {
   });
 }
 
-// 1. ค้นหาพื้นที่แสดงหมวดหมู่   ค้นหา Element ใน HTML ที่มี id="categoryFilter"
-// 2. สร้างเนื้อหา HTML - ในกรณีนี้เป็นการนำปุ่มทั้งหมดไปใส่ใน categoryFilter
-// innerHTML ใช้อ่านหรือกำหนดเนื้อหา HTML ที่อยู่ภายใน Element
-
-// categoryFilter.innerHTML = "HTML String";
-// innerHTML ต้องการ String ของ HTML
-// แต่ map() ได้ Array:
-// จึงใช้ .join('') เพื่อแปลง Array → String
-
-//### สรุป ฟังก์ชันจะสร้างปุ่มหมวดหมู่ภายใน <div>
-/*  
-<div id="categoryFilter">
-    <button class="category-btn active">🏠 ทั้งหมด</button>
-    <button class="category-btn">🐕 สุนัข</button>
-    <button class="category-btn">🐱 แมว</button>
-    <button class="category-btn">🦜 นก</button>
-    <button class="category-btn">🐟 ปลา</button>
-    <button class="category-btn">🐰 สัตว์เลี้ยงขนาดเล็ก</button>
-</div>
-
-*/
-
-//### ฟังก์ชันนี้ทำงานตามลำดับดังนี้:
-//1. ค้นหา Element ที่มี id="categoryFilter"
-//2. ใช้ map() วนผ่านข้อมูลทุกหมวดหมู่
-//3. เปลี่ยนข้อมูลแต่ละหมวดหมู่ให้เป็นปุ่ม HTML
-//4. เพิ่ม Class active ให้หมวดหมู่ที่กำลังถูกเลือก
-//5. กำหนดให้คลิกปุ่มแล้วเรียก selectCategory()
-//6. ใช้ join('') รวมปุ่มทั้งหมดเป็นข้อความเดียว
-//7. นำปุ่มทั้งหมดไปแสดงผ่าน innerHTML
-
-// =============================================
-// (3) เลือกหมวดหมู่
-// =============================================
-
-// เปลี่ยนหมวดหมู่สัตว์ที่ผู้ใช้เลือก แล้วสั่งให้หน้าเว็บแสดงผลใหม่
-// 1) สร้างฟังก์ชันชื่อ selectCategory โดยรับข้อมูลเข้ามา 1 ตัว คือcategory
-// 2) นำค่าที่รับมาเก็บไว้ในตัวแปร selectedCategory
-// 3) เรียกฟังก์ชัน renderCategories() เพื่อสร้างปุ่มหมวดหมู่ใหม่อีกครั้ง เหตุผลสำคัญคือ มีโค้ด
-// class="category-btn ${selectedCategory === category.value ? 'active' : ''}"
-// 4) เรียกฟังก์ชัน renderPets() เพื่อกรองและแสดงสัตว์ตามหมวดหมู่ที่เลือก
-
 function selectCategory(category) {
   selectedCategory = category;
   renderCategories();
   renderPets();
 }
-
-// =============================================
-// (4) แสดงสัตว์เลี้ยง
-// ===============================================
-
-// 1) บอก JavaScript ว่า Card สัตว์จะเอาไปใส่ตรงไหน
-// 2) ถ้า selectedCategory เป็น all ให้ใช้สัตว์ทั้งหมด
-// แต่ถ้าไม่ใช่ all ให้กรองสัตว์ตามหมวดที่เลือก
-// Ternary Operator==>   เงื่อนไข ? ถ้าเป็นจริง : ถ้าเป็นเท็จ
-// 3) เอาข้อมูลที่กรองแล้วมาสร้าง Card
-// .join('') เอาสมาชิกทุกตัวมาต่อกัน โดยไม่ใส่อะไรคั่น รวมให้เป็น HTML String เดียว
-// 4) เอา HTML ไปใส่ในหน้าเว็บ petGrid.innerHTML = ..
 
 function renderPets() {
   const petGrid = document.getElementById("petGrid");
@@ -293,9 +184,6 @@ function renderPets() {
   petGrid.innerHTML = filteredPets.map((pet) => createPetCard(pet)).join("");
 }
 
-// =============================================
-// (5) สร้างการ์ดสัตว์เลี้ยง
-// ================================================
 function createPetCard(pet) {
   return `
         <div class="pet-card">
@@ -342,25 +230,6 @@ function createPetCard(pet) {
     `;
 }
 
-// =============================================
-// (6) Toggle รายละเอียด
-// ==========================================
-
-// 1. รับ petId เข้ามา (petId คือ รหัสของสัตว์ที่ผู้ใช้กดดูรายละเอียด)
-// 2. หา Element ที่เป็นรายละเอียด แล้วนำ Element นี้มาเก็บไว้ในตัวแปร
-// 3. หา Text ของปุ่ม แล้วนำ Element นี้มาเก็บไว้ในตัวแปร
-// 4. ตรวจสอบว่ารายละเอียดถูกซ่อนอยู่หรือไม่
-// ตรวจสอบว่า Element นี้มี class ชื่อ hidden อยู่หรือไม่
-// <div id="details-101" class="hidden">
-// 5. ถ้าถูกซ่อนอยู่ → ให้แสดง
-// <div id="details-101" class="hidden">
-// ลบ class hidden จึงทำให้รายละเอียดกลับมาแสดง
-// แล้วเปลี่ยนข้อความปุ่ม btnText.textContent = 'ซ่อนรายละเอียด';
-
-// 6. ถ้าไม่ได้ซ่อน → ให้ซ่อน
-// เพิ่ม class: hidden ทำให้รายละเอียดถูกซ่อน
-// จากนั้นเปลี่ยนข้อความปุ่มกลับเป็น btnText.textContent = 'ดูรายละเอียด';
-
 function toggleDetails(petId) {
   const details = document.getElementById(`details-${petId}`);
   const btnText = document.getElementById(`btn-text-${petId}`);
@@ -373,9 +242,3 @@ function toggleDetails(petId) {
     btnText.textContent = "ดูรายละเอียด";
   }
 }
-
-function selectCategory(category) {
-  selectedCategory = category;
-  renderCategories();
-  renderPets();
-} 
