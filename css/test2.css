@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: rgb(209, 230, 248);
+  line-height: 1.7;
+  justify-content: center;
+
+}
+
+.container {
+  max-width: 1100px;
+  width: 90%;
+ justify-content: center;
+}
+=
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  justify-content: space-between;
+  padding: 1rem;
+
+}
+
+.nav-bar h2 {color: rgb(140, 140, 233);}
+
+.nav-link a{
+  text-decoration: none;
+  color: black;
+  gap: 1rem;
+}
+
+.nav-link a:hover {
+  text-decoration: underline;
+}
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) ;
+  background-color: bisque;
+  padding: 3rem;
+  gap: 3rem;
+}
+
+.btn-course  {
+    border-radius: 5px;
+  background-color: aqua;
+  color: white;
+  padding: 1rem;
+  
+}
+.btn-course a{
+  text-decoration: none;
+}
+.btn-course a:hover{
+  background-color: aliceblue;
+  color: black;
+}
+.form-check-input{
+  border-radius: 16px;
+  padding: 2rem;
+}
+.section-form {
+  border-radius: 16px;
+  background-color: aliceblue   ;
+  
+}
+.form-display {
+  display: flex;
+  padding: 2rem;
+}
+.radio-flex{
+  display: flex;
+}
+.submit-btn {
+  border-radius: 18px;
+  background-color: blue;
+  color: white;
+padding: 1rem;
+
+
+} 
+
+.info-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+
+gap: 10px;
+height: 140px;
+
+.info-grid p{
+  padding-bottom : 2rem ;
+}
+
+
+}
+.info-grid h2{
+  padding: 2rem;
+  text-align: center;
+
+}
+.grid-1{
+  background-color: white;
+    border-radius: 16px;
+}
+.grid-2{
+  background-color: white;
+    border-radius: 16px;
+}
+.grid-3{
+  background-color: white;
+    border-radius: 16px;
+}
+
+.grid-1 h2{
+    background-color: orange;
+  color: rgb(161, 105, 0);
+}
+.grid-2 h2{
+background-color: rgb(91, 181, 255);
+color: rgb(37, 101, 161);
+}
+
+.grid-3 h2{
+background-color: rgb(253, 107, 253);
+color: rgb(150, 13, 150);
+}
+
+.info-course {
+  margin-bottom: 10rem;
+  background-color: beige;
+}
+
+.form-name input{
+  border-radius: 5px ;
+  padding: 1rem;
+  border: 1px solid rgb(124, 124, 124);
+}
+.form-email input {
+border-radius: 5px ;
+  padding: 1rem;
+  border: 1px solid rgb(124, 124, 124);
+}  
+
+footer{
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(51, 49, 49);
+  color: white;
+  padding: 1rem;
+}
+@media (max-width: 768px){
+  .section-grid {
+  grid-template-columns: repeat(1fr, 1fr) ;
+
+}
+
+}
+@media (max-width: 600px) {
+.section-grid {
+  grid-template-columns: repeat( 1fr) ;
+}
+.form-name {
+  display: inline-block;
+}
+.form-email{
+  display: block;
+}
+footer{
+  justify-content: center;
+  text-align: center;
+  display: block;
+}
+}
+
+

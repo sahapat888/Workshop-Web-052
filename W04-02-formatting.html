@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatting</title>
+    <link rel="stylesheet" href="css/w04-formatting.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="brand">
+            <div class="brand-icon">⛩️</div>
+            <div class="brand-text">
+                <h2>เรียนรู้เว็บเบื้องต้น</h2>
+                <p>Basic Web Development</p>
+            </div>
+        </div>
+        <nav>
+            <a href="index.html">home</a>
+            <a href="02-heading-51.html">Heading</a>
+            <a href="W04-01-formatting.html">Formatting</a>
+            <a href="W06-01-link_image.html">Links</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-icon">&lt;/&gt;</div>
+        <div class="hero-text">
+            <h1>แบบฝึกปฏิบัติ: HTML Formatting</h1>
+            <p>เรียนรู้การจัดรูปแบบข้อความด้วยแท็ก HTML พร้อมตัวอย่างและการตกแต่งด้วย CSS</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="card-grid">
+            
+            <!-- card1 -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-header-icon">🍿</span> ตัวอย่างผลลัพธ์
+                </div>
+
+                <div class="card-body">
+                    <div class="format-row">
+                        <span class="label b-label">B:</span> <b>ข้อความตัวหนา</b>
+                    </div>
+                    <div class="format-row">
+                        <span class="label strong-label">STRONG:</span> <strong>ข้อความสำคัญ</strong>
+                    </div>
+                    <div class="format-row">
+                        <span class="label i-label">I:</span> <i>ข้อความตัวเอียง</i>
+                    </div>
+                    <div class="format-row">
+                        <span class="label em-label">EM:</span> <em>ข้อความเน้นเสียง</em>
+                    </div>
+                    <div class="format-row">
+                        <span class="label u-label">U:</span> <u>ข้อความขีดเส้นใต้</u>
+                    </div>
+                    <div class="format-row">
+                        <span class="label mark-label">MARK:</span> <mark>ข้อความที่ถูกเน้น</mark>
+                    </div>
+                    <div class="format-row">
+                        <span class="label small-label">SMALL:</span> <small>ข้อความขนาดเล็ก</small>
+                    </div>
+                    <div class="format-row">
+                        <span class="label del-label">DEL:</span> <del>ข้อความที่ถูกลบ</del>
+                    </div>
+                    <div class="format-row">
+                        <span class="label sup-label">SUP:</span> x<sup>2</sup>
+                    </div>
+                    <div class="format-row">
+                        <span class="label sub-label">SUB:</span> H<sub>2</sub>O
+                    </div>
+                </div> 
+            </div> 
+
+            <!-- card2 -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-header-icon">&lt;/&gt;</span> ตัวอย่างโค้ด HTML
+                </div>
+                <div class="card-body">
+                    <!-- card2 -->
+<pre class="code-box"><code><span class="line-num">1</span>  <span class="tag">&lt;b&gt;</span>ข้อความตัวหนา<span class="html-tag">&lt;/b&gt;</span>
+<span class="line-no">2</span>  <span class="html-tag">&lt;strong&gt;</span>ข้อความสำคัญ<span class="html-tag">&lt;/strong&gt;</span>
+<span class="line-no">3</span>  <span class="html-tag">&lt;i&gt;</span>ข้อความตัวเอียง<span class="html-tag">&lt;/i&gt;</span>
+<span class="line-no">4</span>  <span class="html-tag">&lt;em&gt;</span>ข้อความเน้นเสียง<span class="html-tag">&lt;/em&gt;</span>
+<span class="line-no">5</span>  <span class="html-tag">&lt;u&gt;</span>ข้อความขีดเส้นใต้<span class="html-tag">&lt;/u&gt;</span>
+<span class="line-no">6</span>  <span class="html-tag">&lt;mark&gt;</span>ข้อความที่ถูกเน้น<span class="html-tag">&lt;/mark&gt;</span>
+<span class="line-no">7</span>  <span class="html-tag">&lt;small&gt;</span>ข้อความขนาดเล็ก<span class="html-tag">&lt;/small&gt;</span>
+<span class="line-no">8</span>  <span class="html-tag">&lt;del&gt;</span>ข้อความที่ถูกลบ<span class="html-tag">&lt;/del&gt;</span>
+<span class="line-no">9</span>  x<span class="html-tag">&lt;sup&gt;</span>2<span class="html-tag">&lt;/sup&gt;</span>
+<span class="line-num">10</span> H<span class="html-tag">&lt;sub&gt;</span>2<span class="html-tag">&lt;/sub&gt;</span>O</code></pre>
+                </div>
+            </div>
+
+<!-- card3 -->
+<div class="card">
+    <div class="card-header">
+        <span class="card-header-icon purple-bg">📝</span> <span class="purple-text">กิจกรรมฝึกปฏิบัติ</span>
+    </div>
+    <div class="card-body">
+        
+        <ul class="activity-list">
+            <li><span class="check check-yellow"> 🗸</span><span>ให้นักศึกษาสร้างหน้าเว็บ 1</span> หน้า</li>
+            <li><span class="check check-red"> 🗸</span><span>ใช้แท็ก formatting อย่างน้อย 6</span> รูปแบบ</li>
+            <li><span class="check check-orange"> 🗸</span><span>ทดลองเปรียบเทียบ <code>&lt;b&gt;</code> กับ <code>&lt;strong&gt;</code> และ <code>&lt;i&gt;</code> กับ <code>&lt;em&gt;</code></span></li>
+            <li><span class="check check-pink"> 🗸</span><span>ปรับสี ขนาด และพื้นหลังบางข้อความด้วย CSS</span></li>
+            <li><span class="check check-green"> 🗸</span><span>บันทึกไฟล์ชื่อ: <strong>w04-formatting.html</strong></span></li>
+        </ul>
+    </div>
+</div>
+        </div>
+
+        <!-- เกร็ดความรู้ -->
+        <div class="tip-box">         
+    <span class="tip-box-icon">💡</span>
+            <h3>เกร็ดความรู้</h3>
+            <p>
+                แท็กจัดรูปแบบข้อความช่วยให้เนื้อหาสื่อสารชัดเจนและมีความหมายมากขึ้น เช่น
+                <code>&lt;strong&gt;</code> ใช้สำหรับข้อความสำคัญ
+                <code>&lt;em&gt;</code> ใช้เน้นความสำคัญหรืออารมณ์ และ
+                <code>&lt;mark&gt;</code> ใช้เน้นข้อความที่ต้องการให้โดดเด่น
+                แท็กเหล่านี้ช่วยเพิ่มความอ่านง่ายและช่วยจัดระเบียบเนื้อหาให้ผู้ใช้งานเข้าใจได้ง่ายขึ้น
+            </p>
+        </div>
+    </div> 
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+        <!-- footer card 1 -->
+        <div class="footer-col">
+            <h3>เรียนรู้เว็บเบื้องต้น</h3>
+            <p>แบบฝึกปฏิบัตินี้จัดทำขึ้นเพื่อให้นักศึกษาเข้าใจการใช้แท็ก HTML Formatting และสามารถนำ CSS มาช่วยตกแต่งหน้าเว็บให้อ่านง่ายและสวยงาม</p>
+            <p>รายวิชา: การออกแบบและพัฒนาเว็บเพจเบื้องต้น</p>
+        </div>
+        
+        <!-- footer card 2 -->
+        <div class="footer-col">
+            <h3>เมนูบทเรียน</h3>
+            <ul>
+                <li>หน้าแรก</li>
+                <li>HTML Heading</li>
+                <li>HTML Formatting</li>
+                <li>HTML Links</li>
+                <li>แบบฝึกปฏิบัติ</li>
+            </ul>
+        </div>
+        
+        <!-- footer card 3 -->
+        <div class="footer-col">
+            <h3>Legal</h3>
+            <ul>
+                <li>Privacy policy</li>
+                <li>Terms of service</li>
+                <li></li>Cookie policy</li>
+            </ul>
+        </div>
+        
+        <!-- footer card 4 -->
+        <div class="footer-col">
+            <h3>Social media</h3>
+            <ul>
+                <li>LinkedIn</li>
+                <li>Twitter</li>
+                <li>GitHub</li>
+            </ul>
+        </div>
+    </div>
+    
+    <!--copyright -->
+    <div class="footer-bottom">
+        <p>&copy; 2026 Web Development Basics  |  สำหรับใช้ประกอบการเรียนการสอน</p>
+    </div>
+    </footer>
+</body>
+
+
+</html>
+
+
+
+<!-- <label for="username">ชื่อผู้ใช้งาน:</label>
+<input type="text" id="username" name="username" placeholder="กรอกชื่อผู้ใช้งาน" required>
+ -->
+
+
+
+ <!-- <p>เพศ:</p>
+<input type="radio" id="male" name="gender" value="male">
+<label for="male">ชาย</label>
+
+
+
+
+<input type="radio" id="female" name="gender" value="female">
+<label for="female">หญิง</label> -->
+
+
+
+<!-- <p>งานอดิเรกที่สนใจ:</p>
+<input type="checkbox" id="sports" name="hobbies" value="sports">
+<label for="sports">เล่นกีฬา</label>
+
+
+
+<input type="checkbox" id="music" name="hobbies" value="music">
+<label for="music">ฟังเพลง</label> -->
+
+
+
+<!-- <label for="province">จังหวัด:</label>
+<select id="province" name="province">
+  <option value="">-- กรุณาเลือกจังหวัด --</option>
+  <option value="bangkok">กรุงเทพมหานคร</option>
+  <option value="chiangmai">เชียงใหม่</option>
+</select> -->
+
+<!-- <label for="address">ที่อยู่:</label>
+<textarea id="address" name="address" rows="4" placeholder="กรอกที่อยู่ปัจจุบัน"></textarea> -->
+
+<!-- <button type="submit">ส่งข้อมูล</button>
+<button type="reset">เริ่มใหม่</button> -->
+
+
+
+
+<!-- 2. Element และ Input Control หลักในฟอร์ม2.1 ช่องกรอกข้อความบรรทัดเดียว (<input>)ชนิดของ <input> ขึ้นอยู่กับค่าของ attribute type:type="text": ข้อความทั่วไป เช่น ชื่อ-นามสกุลtype="email": ตรวจสอบรูปแบบอีเมลอัตโนมัติ (ต้องมี @)type="password": ซ่อนตัวอักษรเป็นจุดดำtype="number": รับเฉพาะตัวเลข (มีปุ่มเลื่อนขึ้น-ลง)type="date": ปฏิทินเลือกวันที่HTML<label for="username">ชื่อผู้ใช้งาน:</label>
+<input type="text" id="username" name="username" placeholder="กรอกชื่อผู้ใช้งาน" required>
+
+2.2 ตัวเลือกแบบเลือกได้ข้อเดียว (type="radio")ใช้เมื่อต้องการให้ผู้ใช้เลือกเพียง 1 ตัวเลือก จากทั้งหมด (ต้องกำหนดค่า name ให้เหมือนกันทุกข้อในกลุ่มเดียวกัน):HTML<p>เพศ:</p>
+
+<input type="radio" id="male" name="gender" value="male">
+<label for="male">ชาย</label>
+
+<input type="radio" id="female" name="gender" value="female">
+<label for="female">หญิง</label>
+
+
+
+2.3 ตัวเลือกแบบเลือกได้หลายข้อ (type="checkbox")ใช้เมื่อผู้ใช้สามารถเลือกได้ หลายตัวเลือก หรือไม่มีเลยก็ได้:HTML<p>งานอดิเรกที่สนใจ:</p>
+
+
+<input type="checkbox" id="sports" name="hobbies" value="sports">
+<label for="sports">เล่นกีฬา</label>
+
+<input type="checkbox" id="music" name="hobbies" value="music">
+<label for="music">ฟังเพลง</label>
+2.4 เมนูดรอปดาวน์ (<select> และ <option>)ใช้เมื่อมีตัวเลือกจำนวนมากเพื่อประหยัดพื้นที่หน้าจอ:HTML<label for="province">จังหวัด:</label>
+
+
+    <select id="province" name="province">
+  <option value="">-- กรุณาเลือกจังหวัด --</option>
+  <option value="bangkok">กรุงเทพมหานคร</option>
+  <option value="chiangmai">เชียงใหม่</option>
+</select>
+2.5 กล่องข้อความหลายบรรทัด (<textarea>)ใช้สำหรับข้อความยาว ๆ เช่น ที่อยู่ หรือความคิดเห็น:HTML<label for="address">ที่อยู่:</label>
+
+    <textarea id="address" name="address" rows="4" placeholder="กรอกที่อยู่ปัจจุบัน"></textarea>
+
+
+
+2.6 ปุ่มกด (<button>)type="submit": ส่งข้อมูลในฟอร์มtype="reset": ล้างข้อมูลในฟอร์มกลับเป็นค่าเริ่มต้นtype="button": ปุ่มทั่วไปที่มักใช้คู่กับ JavaScriptHTML<button type="submit">ส่งข้อมูล</button>
+<button type="reset">เริ่มใหม่</button>
+
+
+
+
+
+
+3. Attributes สำคัญที่ต้องรู้Attributeความหมายและการใช้งานidตัวระบุเฉพาะของ Element 
+นั้นๆ ใช้ผูกกับ <label for="..."> หรืออ้างอิงใน CSS/JSnameชื่อกุญแจ (Key) 
+    ที่จะถูกส่งไปประมวลผล เช่น username=john (สำคัญมากสำหรับ Backend)
+    valueค่าของข้อมูลที่ถูกส่งไปเมื่อกด Submitplaceholderข้อความตัวอย่างลาง ๆ 
+    ในช่องกรอก จะหายไปเมื่อเริ่มพิมพ์requiredบังคับว่าผู้ใช้ ต้องกรอก/เลือก 
+    ช่องนี้ก่อนส่งฟอร์มdisabledปิดการใช้งานช่องนั้น (กดไม่ได้ และส่งค่าไม่ได้)readonlyอ่านได้อย่างเดียว
+     (แก้ไขไม่ได้ แต่ส่งค่าได้)min / maxกำหนดค่าต่ำสุด / สูงสุด (ใช้กับ type="number" หรือ type="date")maxlengthกำหนดจำนวนตัวอักษรสูงสุดที่พิมพ์ได้4. การผูก Label กับ Input (Accessibility & UX)การใช้ <label> คู่กับ id ของ <input> ช่วยให้ผู้ใช้งานสามารถคลิกที่ข้อความ Label เพื่อโฟกัสช่องกรอกข้อมูลได้ทันที:HTML<!-- ใช้ for ให้ตรงกับ id ของ input -->
+<label for="emailInput">อีเมลติดต่อ:</label>
+<input type="email" id="emailInput" name="email">
+
+
+
+
+
+5. การจัด Layout ให้ Responsive และสวยงามแบบใช้ CSS Flexbox / Grid เพียวๆ:CSS/* จัดให้แต่ละ Input วางแนวตั้งลงมา */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-group input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+
+
+/* จัดเลเอาท์เป็น 2 คอลัมน์บนจอใหญ่ */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+
+
+@media (max-width: 600px) {
+  .form-row {
+    grid-template-columns: 1fr; /* ยุบเหลือ 1 คอลัมน์บนมือถือ */
+  }
+}
+
+
+
+
+
+แบบใช้ Bootstrap Class (ตามตัวอย่างในไฟล์ index.html):.form-label: สไตล์สำหรับหัวข้อช่อง.form-control: สไตล์กล่องข้อความ/Input ทั่วไป ให้ยืดเต็มความกว้างและมุมโค้งสวยงาม.form-select: สไตล์สำหรับ Dropdown (<select>).form-check / .form-check-input: สไตล์สำหรับ Radio และ Checkbox.row & .col-md-6: แบ่งพื้นที่เป็นคอลัมน์และปรับตาม Responsive6. การดึงค่าและ Validation ด้วย JavaScriptเมื่อผู้ใช้กดปุ่ม Submit เราสามารถใช้ JavaScript ตรวจสอบข้อมูลก่อนส่งจริง หรือดักจับอีเวนต์เพื่อประมวลผลได้ดังนี้:JavaScript// ดึง Element ฟอร์มมาจัดการ
+const myForm = document.getElementById('myRegisterForm');
+
+myForm.addEventListener('submit', function(event) {
+  // ป้องกันไม่ให้หน้าเว็บ Refresh หรือเปลี่ยนหน้าแบบฟอร์มปกติ
+  event.preventDefault();
+
+  // วิธีดึงค่าจากช่องต่าง ๆ
+  const username = document.getElementById('username').value;
+  const gender = document.querySelector('input[name="gender"]:checked')?.value;
+
+  // ตรวจสอบข้อมูล (Validation)
+  if (username.length < 4) {
+    alert('ชื่อผู้ใช้งานต้องมีความยาวอย่างน้อย 4 ตัวอักษร!');
+    return;
+  }
+
+  // ใช้ FormData ดึงค่าทั้งหมดในฟอร์มได้ในครั้งเดียว
+  const formData = new FormData(myForm);
+  console.log('ข้อมูลผู้ใช้:', Object.fromEntries(formData));
+
+  alert('บันทึกข้อมูลเรียบร้อยแล้ว!');
+});
+
+
+
+
+
+
+
+
+
+
+<!-- รูปแบบที่ 4: Responsive อัตโนมัติ (ไม่ต้องเขียน @media query)
+ใช้ repeat(auto-fit, minmax(ขนาดต่ำสุด, 1fr)) เบราว์เซอร์จะจัดจำนวนคอลัมน์ให้อัตโนมัติตามขนาดหน้าจอ
+
+CSS
+.grid-container {
+  display: grid;
+  /* แต่ละคอลัมน์กว้างอย่างน้อย 250px ถ้าน้อยกว่านี้จะตัดขึ้นบรรทัดใหม่ทันที */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 20px;
+} -->
+
+
+<!-- .grid-container {
+  display: grid;
+  grid-template-columns: 1fr; /* ค่าเริ่มต้นบน มือถือ (1 คอลัมน์) */
+  gap: 15px;
+}
+
+/* หน้าจอขนาดใหญ่กว่า 600px (Tablet) */
+@media (min-width: 600px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* ปรับเป็น 2 คอลัมน์ */
+  }
+}
+
+/* หน้าจอขนาดใหญ่กว่า 1024px (Desktop) */
+@media (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr); /* ปรับเป็น 4 คอลัมน์ */
+  }
+} -->
+
+<!-- text/email 
+ <div class="input-box">
+  <label>ชื่อ:</label>
+  <input type="text" class="full-width-input">
+</div>-->
+
+<!-- .full-width-input {
+  width: 100%; /* ยืดเต็มความกว้างกล่องแม่ */
+  box-sizing: border-box; /* ป้องกันไม่ให้ Padding ดันกล่องล้น */
+  padding: 8px;
+} -->
+
+
+
+
+
+
+
+
+<!-- 2. แบ่ง input text เป็น 2 คอลัมน์ หรือ 1 คอลัมน์ เพื่อทำ responsiveการจัดกลุ่ม Input ให้อยู่คู่กันบนหน้าจอคอมพิวเตอร์ (2 คอลัมน์) และยุบเหลือบรรทัดเดียวบนจอมือถือ (1 คอลัมน์) นิยมใช้ CSS Grid ร่วมกับ Media Query ครับ:   HTML<!-- กล่องแม่ครอบ 2 คอลัมน์ -->
+<div class="input-grid">
+  <div class="field">
+    <label>ชื่อ:</label>
+    <input type="text" class="full-width-input">
+  </div>
+  <div class="field">
+    <label>นามสกุล:</label>
+    <input type="text" class="full-width-input">
+  </div>
+</div> -->
+
+CSS
+/* จอใหญ่ (Desktop) แบ่งเป็น 2 คอลัมน์เท่ากัน */
+.input-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 คอลัมน์ */
+  gap: 15px; /* ระยะห่างระหว่างคอลัมน์ */
+}
+
+/* จอเล็ก (Mobile) ปรับเป็น 1 คอลัมน์ */
+@media (max-width: 600px) {
+  .input-grid {
+    grid-template-columns: 1fr; /* 1 คอลัมน์ */
+  }
+}
+
+
+3. ฝึกใช้ placeholder / required
+placeholder: ข้อความตัวอย่างลาง ๆ ในช่องกรอก จะหายไปเองเมื่อเราเริ่มพิมพ์ข้อความ[cite: 3]
+
+required: บังคับว่าช่องนี้ ห้ามเว้นว่าง ถ้าผู้ใช้ไม่กรอกแล้วกดส่ง เบราว์เซอร์จะขึ้นเตือนให้กรอกทันที[cite: 3]
+
+HTML
+<input 
+  type="email" 
+  placeholder="กรอกอีเมลของคุณ เช่น name@mail.com" 
+  required>
+
+  <!-- 4. สร้าง input ที่ type เป็น radio -->
+   type="radio": ตัวเลือกรูปวงกลมสำหรับให้ผู้ใช้เลือกได้เพียง 1 ข้อ จากทั้งหมด[cite: 3]
+
+จุดสำคัญ: ต้องใส่ attribute name ให้เหมือนกันทุกข้อในกลุ่มเดียวกัน เพื่อให้เบราว์เซอร์รู้ว่าคือกลุ่มตัวเลือกเดียวกัน[cite: 3]
+
+HTML
+<p>เลือกเพศ:</p>
+<label>
+  <input type="radio" name="gender" value="male" required> ชาย
+</label>
+<label>
+  <input type="radio" name="gender" value="female"> หญิง
+  </label>
+
+  5. สร้างปุ่ม submit
+  type="submit": ปุ่มกดสำหรับส่งข้อมูลทั้งหมดในฟอร์มไปประมวลผล[cite: 3]
+
+HTML
+<button type="submit" class="submit-btn">ส่งข้อมูล</button>
+
+<!-- responsive -->
+Desktop 1024 px 4col
+
+tablet 768px 2col
+ 
+Mobile 600 px 1col
+
+<!-- query -->
+
+ /* สำหรับหน้าจอ Tablet (กว้างไม่เกิน 1024px)[cite: 1, 4] */
+    @media (max-width: 1024px) {
+      .card-grid {
+        grid-template-columns: repeat(2, 1fr); /* ยุบเหลือ 2 คอลัมน์[cite: 1] */
+      }
+    }
+
+    /* สำหรับหน้าจอ Mobile (กว้างไม่เกิน 768px)[cite: 1, 4] */
+    @media (max-width: 768px) {
+      .card-grid {
+        grid-template-columns: 1fr; /* ยุบเหลือ 1 คอลัมน์[cite: 1] */
+      }
+      
+      body {
+        padding: 10px; /* ลด Padding หน้าจอมือถือ */
+      }
+    }
+
+
+    <!-- overflow -->
+     1. overflow (การจัดการเนื้อหาที่ล้นกล่อง)
+คืออะไร: ใช้กำหนดว่าจะให้ทำอย่างไรเมื่อเนื้อหาภายใน (เช่น ข้อความ หรือรูปภาพ) มีขนาดใหญ่เกินกว่าขนาดของกล่องแม่ (Parent Container)
+
+ค่าที่นิยมใช้:
+
+visible (ค่าเริ่มต้น): เนื้อหาที่ล้นจะทะลุหรือโผล่ออกมานอกกล่องแม่
+
+hidden: ซ่อนเนื้อหาที่ล้นออกไปทันที (ส่วนที่ล้นจะถูกตัดทิ้ง ไม่เห็น และสโครลไม่ได้)
+
+จุดประสงค์ฮิต: นิยมใช้คู่กับ border-radius บนกล่องแม่ เพื่อป้องกันไม่ให้มุมรูปภาพทะลุขอบโค้งออกมา
+
+scroll: เพิ่มแถบ Scrollbar ให้กล่องเสมอ (ขึ้นทั้งแนวนอนและแนวตั้ง ไม่ว่าเนื้อหาจะล้นหรือไม่ก็ตาม)
+
+auto: เพิ่มแถบ Scrollbar เฉพาะเมื่อเนื้อหาล้นจริง ๆ เท่านั้น
+
+    <!-- object fit  -->
+    2. object-fit (การจัดสัดส่วนรูปภาพ / วิดีโอ)
+คืออะไร: ใช้ควบคุมว่ารูปภาพ (<img>) หรือวิดีโอ (<video>) จะถูกปรับขนาดอย่างไรเมื่อนำไปใส่ในกล่องที่มีการกำหนด width และ height ไว้แน่นอน ช่วยแก้ปัญหารูปเบี้ยว ยืด หรือเตี้ยผิดสัดส่วน
+
+ค่าที่นิยมใช้:
+
+fill (ค่าเริ่มต้น): ดึงยืด/อัดรูปให้เต็มพื้นที่กล่องพอดี (รูปอาจจะเบี้ยวหรือเสียสัดส่วนได้)
+
+cover (นิยมใช้ที่สุด ⭐): ขยายรูปให้เต็มพื้นที่กล่องโดย รักษาสัดส่วนเดิมไว้ ภาพจะไม่เบี้ยว แต่ส่วนที่เกินขอบกล่องจะถูก Crop (ตัดออก) ไป
+
+contain: ปรับขนาดรูปให้เห็นครบทั้งใบโดยรักษาสัดส่วนเดิมไว้ ภาพจะไม่โดนตัดเลย แต่อาจเหลือพื้นที่ว่าง (ขอบสีขาว/ดำ) อยู่ข้างๆ
+
+none: ไม่ปรับสเกลรูปเลย ใช้ขนาดจริงของรูปภาพเดิม
+
+<!-- justify -->
+
+3. justify-content (การจัดตำแหน่งแนวแกนหลักใน Flexbox / Grid)
+คืออะไร: ใช้จัดตำแหน่งการเรียงตัวขององค์ประกอบลูก (Child Elements) ตามแนวแกนหลัก (Main Axis) ซึ่งตามปกติคือ แนวนอน (ซ้าย-ขวา)
+
+เงื่อนไขสำคัญ: คำสั่งนี้จะทำงานได้ต่อเมื่อกล่องแม่มีการกำหนด display: flex; หรือ display: grid; เท่านั้น
+
+ค่าที่นิยมใช้:
+
+flex-start / start (ค่าเริ่มต้น): จัดองค์ประกอบลูกทั้งหมดให้ ชิดซ้าย (หรือชิดจุดเริ่มต้น)
+
+flex-end / end: จัดองค์ประกอบลูกทั้งหมดให้ ชิดขวา
+
+center: จัดองค์ประกอบลูกทั้งหมดให้อยู่ กึ่งกลาง
+
+space-between (นิยมใช้ทำ Navbar ⭐): กระจายองค์ประกอบลูกออกไป โดยตัวแรกชิดซ้ายสุด ตัวสุดท้ายชิดขวาสุด และเว้นช่องว่างระหว่างตัวที่เหลือเท่าๆ กัน
+
+space-around: กระจายองค์ประกอบลูกโดยให้มีระยะห่างรอบๆ แต่ละตัวเท่ากัน (ระยะห่างระหว่างตัวลูกจะใหญ่กว่าระยะห่างชิดขอบ)
+
+space-evenly: กระจายองค์ประกอบลูกโดยให้ระยะห่างทุกช่อง (รวมถึงชิดขอบซ้าย-ขวา) มีขนาดเท่ากันเป๊ะ
+
+<!-- block -->
+ 1. ทำความเข้าใจความต่างของ display สำหรับปุ่มก่อนสร้าง Hero Section 
+ มาดูความแตกต่างของค่า display ทั้ง 3 แบบกันก่อนครับ:   inline: วางเรียงต่อกันในบรรทัดเดียวเหมือนตัวหนังสือ
+  ไม่สามารถ กำหนด width, height หรือ margin แนวตั้งได้   
+  inline-block (เหมาะทำปุ่มทั่วไป): วางเรียงต่อกันในบรรทัดได้เหมือน inline แต่ 
+  สามารถกำหนด width, height, padding, และ margin ได้ครบถ้วน   block: ขึ้นบรรทัดใหม่ทันที 
+  และกินพื้นที่เต็มความกว้างของบรรทัดนั้น เหมาะสำหรับทำ ปุ่มยืดเต็มความกว้าง (width: 100%)  
+   2. การแบ่งคอลัมน์ Hero Section ด้วย CSS Grid (Responsive)Hero Section 
+   นิยมแบ่งเป็น 2 คอลัมน์ บนจอ Desktop (ข้อความฝั่งซ้าย + รูปภาพฝั่งขวา) และยุบเหลือ 1 คอลัมน์ 
+   บนจอมือถือ:   Desktop: grid-template-columns: 1fr 1fr; (แบ่งเป็น 2 ส่วนเท่ากัน)   
+   Mobile (@media): grid-template-columns: 1fr; (ยุบเหลือ 1 ส่วน)
